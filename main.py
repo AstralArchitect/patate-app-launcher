@@ -35,8 +35,8 @@ try:
                 sense.show_message(message, text_colour=(127, 127, 0), scroll_speed=0.1)
             # Vérifier le type d'événement
             elif event.action == "pressed" and event.direction == "middle":
-                extinction_message = "Redemarrage en cours..."
-                sense.show_message(extinction_message, text_colour=(127, 0, 0), scroll_speed=0.1)
+                extinction_message = "Mise a jour..."
+                sense.show_message(extinction_message, text_colour=(127, 0, 127), scroll_speed=0.1)
                 sleep(1)  # Attendre une seconde pour éviter une fermeture accidentelle
                 os.system("sudo git clone https://github.com/AstralArchitect/python.git /root/python/update/")
                 os.system("sudo mv /root/python/update/* /root/python/")
