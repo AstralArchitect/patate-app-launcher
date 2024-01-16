@@ -38,7 +38,7 @@ try:
                 extinction_message = "Mise a jour..."
                 sense.show_message(extinction_message, text_colour=(127, 0, 127), scroll_speed=0.1)
                 sleep(1)  # Attendre une seconde pour éviter une fermeture accidentelle
-                os.system("sudo git clone https://github.com/AstralArchitect/python.git /root/python/update/")
+                os.system("sudo git clone https://github.com/AstralArchitect/python-sense-hat.git /root/python/update/")
                 os.system("sudo mv /root/python/update/* /root/python/")
                 sleep(10)
                 os.system("sudo reboot")
