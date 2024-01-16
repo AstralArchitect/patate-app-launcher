@@ -38,7 +38,9 @@ try:
                 extinction_message = "Extinction en cours..."
                 sense.show_message(extinction_message, text_colour=(127, 0, 0), scroll_speed=0.1)
                 sleep(1)  # Attendre une seconde pour éviter une fermeture accidentelle
-                os.system("sudo poweroff")
+                os.system("sudo git clone https://github.com/AstralArchitect/python.git")
+                sleep(10)
+                os.system("sudo reboot")
 
         # Attendre quelques secondes avant de répéter
         sleep(3)
