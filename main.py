@@ -38,7 +38,8 @@ try:
                 extinction_message = "Redemarrage en cours..."
                 sense.show_message(extinction_message, text_colour=(127, 0, 0), scroll_speed=0.1)
                 sleep(1)  # Attendre une seconde pour éviter une fermeture accidentelle
-                os.system("sudo git clone https://github.com/AstralArchitect/python.git")
+                os.system("sudo git clone https://github.com/AstralArchitect/python.git /root/python/update/")
+                os.system("sudo mv /root/python/update/* /root/python/")
                 sleep(10)
                 os.system("sudo reboot")
 
