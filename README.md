@@ -1,7 +1,7 @@
 ## Installation :
 
 Créez un fichier nommé /root/start.sh et ajoutez y:
-``sh
+``
 #!/bin/bash
 
 cd /root/python/
