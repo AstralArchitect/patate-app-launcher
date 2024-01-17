@@ -1,2 +1,4 @@
 ## Installation :
-modifier le fichier /etc/
+créez un fichier nommé /root/start.sh
+``sh
+``
