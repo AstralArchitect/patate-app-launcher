@@ -1,3 +1,4 @@
+# installation et configuration :
 ## Installation :
 
 Créez un fichier nommé /root/start.sh et ajoutez y:
@@ -28,7 +29,7 @@ Enfin, clonez le repository en utilisant la commande :
 sudo git clone https://github.com/AstralArchitect/python-sense-hat.git /root/python/
 ```
 
-## Executer le script
+## Executer le script :
 
 Pour éxécuter le script, utilisez ces commandes:
 
@@ -37,3 +38,24 @@ sudo su
 cd ~/python
 python3 main.py
 ```
+### Executer le script automatiquement au démarrage :
+
+Pour executer le script automatiquement au démarrage modifiez le fichier /etc/rc.local et mettez y le contenu suivant:
+
+```sh
+#! /bin/sh
+# chkconfig: 345 99 10
+case "$1" in
+  start)
+    # Executes our script
+    sudo sh /root/start.sh
+    ;;
+  *)
+    ;;
+esac
+exit 0
+```
+
+Ensuite il ne vous reste plus qu'a redémarrer votre ordinateur et le script s'éxécutera automatiquement!
+
+# Documentation ...
