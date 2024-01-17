@@ -58,4 +58,7 @@ exit 0
 
 Ensuite il ne vous reste plus qu'a redémarrer votre ordinateur et le script s'éxécutera automatiquement!
 
-# Documentation ...
+# Documentation :
+
+## Commandes de base :
+
