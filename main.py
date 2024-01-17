@@ -36,7 +36,7 @@ try:
             # Vérifier le type d'événement
             elif event.action == "pressed" and event.direction == "middle":
                 extinction_message = "Mise a jour..."
-                sense.show_message(extinction_message, text_colour=(127, 0, 127), scroll_speed=0.1)
+                sense.show_message(extinction_message, text_colour=(127, 30, 127), scroll_speed=0.1)
                 sleep(1)  # Attendre une seconde pour éviter une fermeture accidentelle
                 os.system("sudo rm -r /root/python/update/.git /root/update/main.py")
                 os.system("sudo git clone https://github.com/AstralArchitect/python-sense-hat.git /root/python/update/")
