@@ -43,11 +43,56 @@ try:
                 extinction_message = "Mise a jour..."
                 sense.show_message(extinction_message, text_colour=(127, 60, 127), scroll_speed=0.1)
                 sleep(1)  # Attendre une seconde pour éviter une fermeture accidentelle
+
+                # Allumer le pixel en haut à gauche en rouge
+                sense.set_pixel(0, 3, 255, 255, 0)
+
+                # Allumer le pixel en haut à droite en vert
+                sense.set_pixel(0, 5, 255, 255, 0)
+
+                # Allumer le pixel en bas à gauche en bleu
+                sense.set_pixel(1, 3, 255, 255, 0)
+
+                # Allumer le pixel en bas à droite en jaune
+                sense.set_pixel(1, 5, 255, 255, 0)
                 os.system("sudo rm -r /root/python/update/.git /root/update/main.py")
                 os.system("sudo git clone https://github.com/AstralArchitect/python-sense-hat.git /root/python/update/")
                 os.system("sudo mv /root/python/update/* /root/python/")
+                # Allumer le pixel en haut à gauche en rouge
+                sense.set_pixel(2, 3, 255, 255, 0)
+
+                # Allumer le pixel en haut à droite en vert
+                sense.set_pixel(2, 5, 255, 255, 0)
+
+                # Allumer le pixel en bas à gauche en bleu
+                sense.set_pixel(3, 3, 255, 255, 0)
+
+                # Allumer le pixel en bas à droite en jaune
+                sense.set_pixel(3, 5, 255, 255, 0)
+                # Allumer le pixel en haut à gauche en rouge
                 os.system("sudo apt update -y")
                 os.system("sudo apt upgrade -y")
+                sense.set_pixel(4, 3, 255, 255, 0)
+
+                # Allumer le pixel en haut à droite en vert
+                sense.set_pixel(4, 5, 255, 255, 0)
+
+                # Allumer le pixel en bas à gauche en bleu
+                sense.set_pixel(5, 3, 255, 255, 0)
+
+                # Allumer le pixel en bas à droite en jaune
+                sense.set_pixel(5, 5, 255, 255, 0)
+
+                sense.set_pixel(6, 3, 255, 255, 0)
+
+                # Allumer le pixel en haut à droite en vert
+                sense.set_pixel(6, 5, 255, 255, 0)
+
+                # Allumer le pixel en bas à gauche en bleu
+                sense.set_pixel(7, 3, 255, 255, 0)
+
+                # Allumer le pixel en bas à droite en jaune
+                sense.set_pixel(7, 5, 255, 255, 0)
                 sleep(1)
                 os.system("sudo reboot")
 
