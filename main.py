@@ -41,8 +41,8 @@ try:
                 os.system("sudo rm -r /root/python/update/.git /root/update/main.py")
                 os.system("sudo git clone https://github.com/AstralArchitect/python-sense-hat.git /root/python/update/")
                 os.system("sudo mv /root/python/update/* /root/python/")
-                os.system("sudo apt update")
-                os.system("sudo apt upgrade")
+                os.system("sudo apt update -y")
+                os.system("sudo apt upgrade -y")
                 sleep(1)
                 os.system("sudo reboot")
 
