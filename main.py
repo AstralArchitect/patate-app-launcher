@@ -41,7 +41,7 @@ try:
             # Vérifier le type d'événement
             elif event.action == "pressed" and event.direction == "middle":
                 extinction_message = "Mise a jour..."
-                sense.show_message(extinction_message, text_colour=(127, 60, 127), scroll_speed=0.1)
+                sense.show_message(extinction_message, text_colour=(127, 90, 127), scroll_speed=0.1)
                 sleep(1)  # Attendre une seconde pour éviter une fermeture accidentelle
 
                 # Allumer le pixel en haut à gauche en rouge
