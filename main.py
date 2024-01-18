@@ -171,18 +171,12 @@ try:
                 sense.set_pixel(1, 3, 127, 127, 0)
                 
                 sense.set_pixel(1, 4, 127, 127, 0)
-
-                sense.set_pixel(0, 3, 127, 127, 0)
-
-                sense.set_pixel(0, 4, 127, 127, 0)
-                
-                sense.set_pixel(1, 3, 127, 127, 0)
-                
-                sense.set_pixel(1, 4, 127, 127, 0)
+                sleep(0.1)
 
                 sense.set_pixel(2, 3, 127, 127, 0)
 
                 sense.set_pixel(2, 4, 127, 127, 0)
+                sleep(0.1)
 
                 sense.set_pixel(3, 3, 127, 127, 0)
 
@@ -190,21 +184,21 @@ try:
                 
                 os.system("sudo mv /root/python/update/main.py /root/python/")
                 os.system("sudo mv /root/python/update/version.txt /root/python/")
-
+                sleep(0.1)
                 sense.set_pixel(4, 3, 127, 127, 0)
 
                 sense.set_pixel(4, 4, 127, 127, 0)
-
+                sleep(0.1)
                 sense.set_pixel(5, 3, 127, 127, 0)
 
                 sense.set_pixel(5, 4, 127, 127, 0)
 
                 os.system("sudo rm -r /root/python/update/.git /root/python/update/README.md /root/python/update/installation/")
-
+                sleep(0.1)
                 sense.set_pixel(6, 3, 127, 127, 0)
 
                 sense.set_pixel(6, 4, 127, 127, 0)
-
+                sleep(0.1)
                 sense.set_pixel(7, 3, 127, 127, 0)
 
                 sense.set_pixel(7, 4, 127, 127, 0)
