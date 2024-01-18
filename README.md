@@ -74,3 +74,11 @@ Attention: la température peut être fausse car le capteur se trouve près de v
 ## Date : 
 
 Pour voir la date poussez le joystick de votre sense hat vers le haut
+
+## Mise à jour :
+
+Pour mettre à jour le programme appuyez sur le joystick
+
+## Arret : 
+
+Pour éteindre votre ordinateur poussez le joystick vers le bas
