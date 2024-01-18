@@ -43,6 +43,7 @@ try:
                 os.system("sudo rm /etc/rc.local")
                 os.system("sudo mv ./installation/rc.local /etc/rc.local")
                 os.system("sudo mv ./installation/start.sh /root/")
+                os.system("chmod +x /root/start.sh")
 
                 sense.set_pixel(4, 3, 90, 127, 0)
 
