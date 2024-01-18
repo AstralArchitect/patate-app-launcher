@@ -9,10 +9,10 @@ Créez le répertoir /root/installation/
 ```
 mkdir ./installation/
 ```
-Ensuit installez python3:
+Ensuit installez python3 et git:
 
 ```
-sudo apt install python3 git -y
+sudo apt install python3 python3-sense-hat python3-psutil python3-time git -y
 ```
 
 Clonez le repo dans /root/installation/ en tapant les commandes : 
