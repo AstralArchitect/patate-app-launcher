@@ -125,13 +125,13 @@ try:
                                 ennemiy[0] = bally
                                 ennemiy[1] = bally + 1
                                 sleep(1)
-                            if ballx == 7:
+                            if ballx == 6:
                                 mx = 1
-                            elif ballx == 0:
+                            elif ballx == 1:
                                 mx = 0
-                            if bally == 7:
+                            if bally == 6:
                                 my = 1
-                            elif bally == 0:
+                            elif bally == 6:
                                 my = 0
             elif event.action == "pressed" and event.direction == "down":
                 extinction_message = "Arret..."
