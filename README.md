@@ -5,6 +5,10 @@ déplacez vous dans /root/
 ```
 cd /root/
 ```
+Créez le répertoir /root/installation/
+```
+mkdir ./installation/
+```
 
 Clonez le repo dans /root/installation/ en tapant les commandes : 
 ```
