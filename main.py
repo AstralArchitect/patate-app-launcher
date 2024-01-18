@@ -152,9 +152,6 @@ try:
 
                 sense.set_pixel(0, 4, 127, 127, 0)
                 
-                sense.set_pixel(1, 3, 127, 127, 0)
-                
-                sense.set_pixel(1, 4, 127, 127, 0)
                 os.system("sudo git clone https://github.com/AstralArchitect/python-sense-hat.git /root/python/update/")
                 f = open("/root/python/version.txt")
                 f2 = open("/root/python/update/version.txt")
@@ -164,11 +161,17 @@ try:
                 if v == vn:
                     message = "redemmarrage..."
                     sense.show_message(message, text_colour=(0, 0, 127), scroll_speed=0.1)
-                    sleep(1)
+                    sleep(0.5)
                     os.system("sudo reboot")
+                    break
                 else:
                     message = "Mise a jour..."
                     sense.show_message(message, text_colour=(0, 0, 127), scroll_speed=0.1)
+                
+                sense.set_pixel(1, 3, 127, 127, 0)
+                
+                sense.set_pixel(1, 4, 127, 127, 0)
+
                 sense.set_pixel(0, 3, 127, 127, 0)
 
                 sense.set_pixel(0, 4, 127, 127, 0)
