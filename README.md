@@ -62,3 +62,15 @@ Ensuite il ne vous reste plus qu'a redémarrer votre ordinateur et le script s'�
 
 ## Commandes de base :
 
+## 1. Usage du CPU et de la mémoire :
+Pour voir lusage du cpu et de la mémoire poussez le joystick de votre sense hat vers la gauche
+
+## 2. Température, Pression et Humidité :
+
+Pour voire la température la pression et l'humidité poussez le joystick du sense hat vers la droite
+
+Attention: la température peut être fausse car le capteur se trouve près de votre ordinateur qui chauffe
+
+## Date : 
+
+Pour voir la date poussez le joystick de votre sense hat vers le haut
