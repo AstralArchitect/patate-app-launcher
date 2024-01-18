@@ -161,7 +161,7 @@ try:
                     sleep(1)
                     os.system("sudo reboot")
                 else:
-                    message = "Mise à jour..."
+                    message = "Mise a jour..."
                     sense.show_message(message, text_colour=(0, 0, 127), scroll_speed=0.1)
                 sense.set_pixel(0, 3, 127, 127, 0)
 
