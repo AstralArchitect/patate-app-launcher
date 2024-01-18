@@ -117,13 +117,13 @@ try:
                                 bally = bally + 1
                             elif my == 1:
                                 bally = bally - 1
-                            if bally > 4:
-                                ennemiy[0] = bally
-                                ennemiy[1] = bally + 1
-                                sleep(1)
-                            elif bally < 4:
+                            if bally > 4 :
                                 ennemiy[0] = bally + 1
                                 ennemiy[1] = bally
+                                sleep(1)
+                            elif bally < 4:
+                                ennemiy[0] = bally
+                                ennemiy[1] = bally + 1
                                 sleep(1)
                             if ballx == 7:
                                 mx = 1
