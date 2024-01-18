@@ -21,7 +21,7 @@ sudo apt install python3
 ```
 Puis déplacez vous dans le dossier:
 ```
-sudo cd /root/python-sense-hat/
+sudo cd /root/installation/
 ```
 Enfin executez le script d'installation :
 ```
