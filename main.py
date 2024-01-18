@@ -53,7 +53,10 @@ try:
                 
                 sense.set_pixel(1, 4, 127, 127, 0)
                 os.system("sudo git clone https://github.com/AstralArchitect/python-sense-hat.git /root/python/update/")
-                
+                f = open("/root/python/version.txt")
+                f2 = open("/root/python/update/version.txt")
+                v = f.read()
+                sense.show_message(v, text_colour=(127, 0, 127), scroll_speed=0.1)                
                 sense.set_pixel(2, 3, 127, 127, 0)
 
                 sense.set_pixel(2, 4, 127, 127, 0)
@@ -63,6 +66,7 @@ try:
                 sense.set_pixel(3, 4, 127, 127, 0)
                 
                 os.system("sudo mv /root/python/update/main.py /root/python/")
+                os.system("sudo mv /root/python/update/version.txt /root/python/")
 
                 sense.set_pixel(4, 3, 127, 127, 0)
 
