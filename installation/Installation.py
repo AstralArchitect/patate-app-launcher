@@ -39,7 +39,7 @@ try:
                 sense.set_pixel(3, 3, 90, 127, 0)
 
                 sense.set_pixel(3, 4, 90, 127, 0)
-                
+                os.system("sudo rm /etc/rc.local")
                 os.system("sudo mv ./installation/rc.local /etc/")
                 os.system("sudo mv ./installation/start.sh /root/")
 
