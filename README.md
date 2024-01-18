@@ -71,14 +71,14 @@ Pour voire la température la pression et l'humidité poussez le joystick du sen
 
 Attention: la température peut être fausse car le capteur se trouve près de votre ordinateur qui chauffe
 
-## Date : 
+## 3. Date : 
 
 Pour voir la date poussez le joystick de votre sense hat vers le haut
 
-## Mise à jour :
+## 4. Mise à jour :
 
 Pour mettre à jour le programme appuyez sur le joystick
 
-## Arret : 
+## 5. Arret : 
 
 Pour éteindre votre ordinateur poussez le joystick vers le bas
