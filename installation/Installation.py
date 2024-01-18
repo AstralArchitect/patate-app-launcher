@@ -1,9 +1,7 @@
-from datetime import datetime
 from sense_hat import SenseHat
 from time import sleep
 import os
 import psutil
-import datetime
 
 # Initialiser l'objet SenseHat
 sense = SenseHat()
@@ -27,8 +25,7 @@ try:
                 sense.set_pixel(0, 3, 90, 127, 0)
 
                 sense.set_pixel(0, 4, 90, 127, 0)
-                os.system("sudo apt-get update")
-                os.system("sudo apt-get upgrade")
+                os.system("apt-get update")
                 sense.set_pixel(1, 3, 90, 127, 0)
                 
                 sense.set_pixel(1, 4, 90, 127, 0)
@@ -36,22 +33,24 @@ try:
                 sense.set_pixel(2, 3, 90, 127, 0)
 
                 sense.set_pixel(2, 4, 90, 127, 0)
+                os.system("apt-get upgrade")
 
                 sense.set_pixel(3, 3, 90, 127, 0)
 
                 sense.set_pixel(3, 4, 90, 127, 0)
-                os.system("sudo rm /etc/rc.local")
-                os.system("sudo mv /root/installation/installation/rc.local /etc/rc.local")
-                os.system("sudo mv /root/installation/installation/start.sh /root/")
+                os.system("rm /etc/rc.local")
+                os.system("mv /root/installation/installation/rc.local /etc/rc.local")
+                os.system("mv /root/installation/installation/start.sh /root/")
                 os.system("chmod +x /root/start.sh")
+                os.system("chmod +x /etc/rc.local")
 
                 sense.set_pixel(4, 3, 90, 127, 0)
 
                 sense.set_pixel(4, 4, 90, 127, 0)
 
-                os.system("sudo mkdir /root/python/ /root/python/update/")
-                os.system("sudo mv /root/installation/main.py /root/python/")
-                os.system("sudo mv /root/installation/version.txt /root/python/")
+                os.system("mkdir /root/python/ /root/python/update/")
+                os.system("mv /root/installation/main.py /root/python/")
+                os.system("mv /root/installation/version.txt /root/python/")
                 sense.set_pixel(5, 3, 90, 127, 0)
 
                 sense.set_pixel(5, 4, 90, 127, 0)
@@ -59,7 +58,7 @@ try:
                 sense.set_pixel(6, 3, 90, 127, 0)
 
                 sense.set_pixel(6, 4, 90, 127, 0)
-                os.system("sudo rm -r /root/installation/")
+                os.system("rm -r /root/installation/")
 
                 sense.set_pixel(7, 3, 90, 127, 0)
 
