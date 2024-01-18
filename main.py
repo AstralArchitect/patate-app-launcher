@@ -90,6 +90,7 @@ try:
                 ennemiy = [3, 4]
                 mx = 0
                 my = 0
+                temps = 1
                 sleep(1)
                 a = 0
                 sense.set_pixel(youx, youy[0], 127, 127, 0)
@@ -167,6 +168,7 @@ try:
                         my = 1
                     elif bally == 1:
                         my = 0
+                    temps = temps - 0.01
                     for event in events:
                         if event.action == "pressed" and event.direction == "up":
                             if not (youy[1] < 2):
