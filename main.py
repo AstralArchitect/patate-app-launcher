@@ -34,7 +34,7 @@ try:
                 sense.show_message(message, text_colour=(0, 127, 0), scroll_speed=0.1)
             elif event.action == "pressed" and event.direction == "up":
                 date_actuelle = datetime.datetime.now()
-                date_formatee = date_actuelle.strftime("%d/%m/%Y %H:%M")
+                date_formatee = date_actuelle.strftime("%d/%m/%Y")
                 sense.show_message(date_formatee, text_colour=(127, 127, 0), scroll_speed=0.1)
             elif event.action == "pressed" and event.direction == "down":
                 extinction_message = "Arret..."
