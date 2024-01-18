@@ -1,9 +1,14 @@
 # installation et configuration :
 ## Installation :
+déplacez vous dans /root/
 
-Clonez le repo dans /root/ en tapant les commandes : 
 ```
-sudo git clone https://github.com/AstralArchitect/python-sense-hat.git /root/
+cd /root/
+```
+
+Clonez le repo dans /root/installation/ en tapant les commandes : 
+```
+sudo git clone https://github.com/AstralArchitect/python-sense-hat.git /root/installation/
 ```
 Ensuit installez python3:
 
