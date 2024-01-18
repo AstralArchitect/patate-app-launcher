@@ -56,7 +56,13 @@ try:
                 f = open("/root/python/version.txt")
                 f2 = open("/root/python/update/version.txt")
                 v = f.read()
-                sense.show_message(v, text_colour=(127, 0, 127), scroll_speed=0.1)                
+                vn = f2.read()
+
+                if v == vn:
+                    message = "Bonjour."
+                    sense.show_message(message, text_colour=(0, 0, 127), scroll_speed=0.1)
+                    break
+
                 sense.set_pixel(2, 3, 127, 127, 0)
 
                 sense.set_pixel(2, 4, 127, 127, 0)
