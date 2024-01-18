@@ -129,9 +129,9 @@ try:
                                 mx = 1
                             elif ballx == 1:
                                 mx = 0
-                            if bally == 6:
+                            if bally == 7:
                                 my = 1
-                            elif bally == 1:
+                            elif bally == 0:
                                 my = 0
             elif event.action == "pressed" and event.direction == "down":
                 extinction_message = "Arret..."
