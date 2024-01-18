@@ -127,8 +127,14 @@ try:
                                 sleep(1)
                             if ballx == 6:
                                 mx = 1
-                            elif ballx == 1:
+                            elif ballx == 1 and bally == (youy[0] or youy[1]):
                                 mx = 0
+                            else:
+                                mx = 0
+                                message = "Vous avez perdu !"
+                                sense.show_message(message, text_colour=(127, 0, 0), scroll_speed=0.1)
+                                a = 1
+                                break
                             if bally == 7:
                                 my = 1
                             elif bally == 0:
