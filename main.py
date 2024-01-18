@@ -53,6 +53,8 @@ try:
     sense.set_pixel(7, 3, 127, 127, 0)
 
     sense.set_pixel(7, 4, 127, 127, 0)
+    sleep(1)
+    os.system("sudo reboot")
     welcome_message = "Bonjour."
     sense.show_message(welcome_message, text_colour=(0, 0, 127), scroll_speed=0.1)
 
@@ -77,7 +79,7 @@ try:
                 message = f'CPU:{cpu_usage:.1f}%, Mem:{memory_usage:.1f}%'
                 sense.show_message(message, text_colour=(0, 127, 0), scroll_speed=0.1)
             elif event.action == "pressed" and event.direction == "up":
-                message = "lancement de pong..."
+                message = "pong..."
                 sense.show_message(message, text_colour=(127, 127, 0), scroll_speed=0.1)
                 ballx = 3
                 bally = 3
@@ -103,6 +105,11 @@ try:
                             sense.set_pixel(ballx, bally, 127, 127, 0)
                             sense.set_pixel(ennemix, ennemiy[0], 127, 127, 0)
                             sense.set_pixel(ennemix, ennemiy[1], 127, 127, 0)
+                            ballx = ballx + 1
+                            bally = bally + 1
+                            ennemiy[0] = bally
+                            ennemiy[1] = bally + 1
+                            sleep(1)
 
             elif event.action == "pressed" and event.direction == "down":
                 extinction_message = "Arret..."
