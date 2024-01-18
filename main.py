@@ -22,8 +22,6 @@ try:
     vn = f2.read()
     b = 1
     if v == vn:
-        message = "Bonjour."
-        sense.show_message(message, text_colour=(0, 0, 127), scroll_speed=0.1)
         b = 0
     if b == 1:
         sense.set_pixel(2, 3, 127, 127, 0)
@@ -94,11 +92,13 @@ try:
                     events = sense.stick.get_events()
                     for event in events:
                         if event.action == "pressed" and event.direction == "up":
-                            youy[0] = youy[0] - 1
-                            youy[1] = youy[1] - 1
+                            if not (youy[0] < 2 or youy[1] > 6):
+                                youy[0] = youy[0] - 1
+                                youy[1] = youy[1] - 1
                         elif event.action == "pressed" and event.direction == "down":
-                            youy[0] = youy[0] + 1
-                            youy[1] = youy[1] + 1
+                            if not (youy[0] < 2 or youy[1] > 6):
+                                youy[0] = youy[0] + 1
+                                youy[1] = youy[1] + 1
                         else:
                             sense.clear()
                             sense.set_pixel(youx, youy[0], 127, 127, 0)
@@ -106,11 +106,19 @@ try:
                             sense.set_pixel(ballx, bally, 127, 127, 0)
                             sense.set_pixel(ennemix, ennemiy[0], 127, 127, 0)
                             sense.set_pixel(ennemix, ennemiy[1], 127, 127, 0)
-                            ballx = ballx + 1
-                            bally = bally + 1
+                            if m == 0:
+                                ballx = ballx + 1
+                                bally = bally + 1
+                        if bally > 4:
                             ennemiy[0] = bally
                             ennemiy[1] = bally + 1
                             sleep(1)
+                        elif bally < 4:
+                            ennemiy[0] = bally + 1
+                            ennemiy[1] = bally
+                            sleep(1)
+                        if ennemiy[0] == bally & ennemix == ballx or ennemiy[1] == bally & ennemix or youy[0] == bally & youx == ballx or youy[1] == bally & youx:
+                            m = 1
 
             elif event.action == "pressed" and event.direction == "down":
                 extinction_message = "Arret..."
