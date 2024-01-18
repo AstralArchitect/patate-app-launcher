@@ -12,9 +12,6 @@ try:
 
     sense.set_pixel(0, 4, 127, 127, 0)
                 
-    sense.set_pixel(1, 3, 127, 127, 0)
-                
-    sense.set_pixel(1, 4, 127, 127, 0)
     os.system("sudo git clone https://github.com/AstralArchitect/python-sense-hat.git /root/python/update/")
     f = open("/root/python/version.txt")
     f2 = open("/root/python/update/version.txt")
@@ -24,6 +21,10 @@ try:
     if v == vn:
         b = 0
     if b == 1:
+        sense.set_pixel(1, 3, 127, 127, 0)
+                
+        sense.set_pixel(1, 4, 127, 127, 0)
+        
         sense.set_pixel(2, 3, 127, 127, 0)
 
         sense.set_pixel(2, 4, 127, 127, 0)
