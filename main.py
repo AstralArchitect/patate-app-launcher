@@ -87,6 +87,8 @@ try:
                 youy = [3, 4]
                 ennemix = 7
                 ennemiy = [3, 4]
+                mx = 0
+                my = 0
                 sleep(1)
                 a = 0
                 while (a == 0):
@@ -107,19 +109,30 @@ try:
                             sense.set_pixel(ballx, bally, 127, 127, 0)
                             sense.set_pixel(ennemix, ennemiy[0], 127, 127, 0)
                             sense.set_pixel(ennemix, ennemiy[1], 127, 127, 0)
-                            ballx = ballx + 1
-                            bally = bally + 1
-                        if bally > 4:
-                            ennemiy[0] = bally
-                            ennemiy[1] = bally + 1
-                            sleep(1)
-                        elif bally < 4:
-                            ennemiy[0] = bally + 1
-                            ennemiy[1] = bally
-                            sleep(1)
-                        if ennemiy[0] == bally & ennemix == ballx or ennemiy[1] == bally & ennemix or youy[0] == bally & youx == ballx or youy[1] == bally & youx:
-                            m = 1
-
+                            if mx == 0:
+                                ballx = ballx + 1
+                            elif mx == 1:
+                                ballx = ballx - 1
+                            if my == 0:
+                                bally = bally + 1
+                            elif my == 1:
+                                bally = bally - 1
+                            if bally > 4:
+                                ennemiy[0] = bally
+                                ennemiy[1] = bally + 1
+                                sleep(1)
+                            elif bally < 4:
+                                ennemiy[0] = bally + 1
+                                ennemiy[1] = bally
+                                sleep(1)
+                            if ballx == 7:
+                                mx = 1
+                            elif ballx == 0:
+                                mx = 0
+                            if bally == 7:
+                                my = 1
+                            elif bally == 0:
+                                my = 0
             elif event.action == "pressed" and event.direction == "down":
                 extinction_message = "Arret..."
                 sense.show_message(extinction_message, text_colour=(127, 0, 0), scroll_speed=0.1)
