@@ -7,6 +7,7 @@ import psutil
 sense = SenseHat()
 
 try:
+    sense.clear()
     os.system("sudo rm -r /root/python/update/.git /root/python/update/*")
     sense.set_pixel(0, 3, 127, 127, 0)
 
