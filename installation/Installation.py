@@ -58,7 +58,7 @@ try:
                 sense.set_pixel(6, 3, 90, 127, 0)
 
                 sense.set_pixel(6, 4, 90, 127, 0)
-                os.system("sudo rm ../installation/")
+                os.system("sudo rm -r ../installation/")
 
                 sense.set_pixel(7, 3, 90, 127, 0)
 
