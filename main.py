@@ -91,11 +91,11 @@ try:
                     events = sense.stick.get_events()
                     for event in events:
                         if event.action == "pressed" and event.direction == "up":
-                            youy[0] = youy[1] + 1
-                            youy[1] = youy[1] + 1
-                        elif event.action == "pressed" and event.direction == "down":
-                            youy[0] = youy[1] - 1
+                            youy[0] = youy[0] - 1
                             youy[1] = youy[1] - 1
+                        elif event.action == "pressed" and event.direction == "down":
+                            youy[0] = youy[0] + 1
+                            youy[1] = youy[1] + 1
                         else:
                             sense.clear()
                             sense.set_pixel(youx, youy[0], 127, 127, 0)
