@@ -31,7 +31,24 @@ try:
                 message = f'CPU:{cpu_usage:.1f}%, Mem:{memory_usage:.1f}%'
                 sense.show_message(message, text_colour=(0, 127, 0), scroll_speed=0.1)
             elif event.action == "pressed" and event.direction == "up":
-                os.system("sudo python3 /root/python/pong-test.py")
+                message = "lancement de pong..."
+                sense.show_message(message, text_colour=(127, 127, 0), scroll_speed=0.1)
+                ballx = 3
+                bally = 3
+                youx = 0
+                youy = [3, 4]
+                ennemix = 7
+                ennemiy = [3, 4]
+                sleep(1)
+                for event in events:
+                    if event.action == "pressed" and event.direction == "up":
+                        youy[0] + 1
+                        youy[1] + 1
+                        sense.set_pixel(youx, youy[0], 127, 127, 0)
+                        sense.set_pixel(youx, youy[1], 127, 127, 0)
+                        sense.set_pixel(ballx, bally, 127, 127, 0)
+                        sense.set_pixel(ennemix, ennemiy[0], 127, 127, 0)
+                        sense.set_pixel(ennemix, ennemiy[1], 127, 127, 0)
             elif event.action == "pressed" and event.direction == "down":
                 extinction_message = "Arret..."
                 sense.show_message(extinction_message, text_colour=(127, 0, 0), scroll_speed=0.1)
@@ -72,7 +89,6 @@ try:
                 
                 os.system("sudo mv /root/python/update/main.py /root/python/")
                 os.system("sudo mv /root/python/update/version.txt /root/python/")
-                os.system("sudo mv /root/python/update/python-test.py /root/python/")
 
                 sense.set_pixel(4, 3, 127, 127, 0)
 
