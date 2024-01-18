@@ -40,23 +40,26 @@ try:
                 ennemix = 7
                 ennemiy = [3, 4]
                 sleep(1)
-                for event in events:
-                    if event.action == "pressed" and event.direction == "up":
-                        youy[0] + 1
-                        youy[1] + 1
-                        sense.set_pixel(youx, youy[0], 127, 127, 0)
-                        sense.set_pixel(youx, youy[1], 127, 127, 0)
-                        sense.set_pixel(ballx, bally, 127, 127, 0)
-                        sense.set_pixel(ennemix, ennemiy[0], 127, 127, 0)
-                        sense.set_pixel(ennemix, ennemiy[1], 127, 127, 0)
-                    elif event.action == "pressed" and event.direction == "down":
-                        youy[0] - 1
-                        youy[1] - 1
-                        sense.set_pixel(youx, youy[0], 127, 127, 0)
-                        sense.set_pixel(youx, youy[1], 127, 127, 0)
-                        sense.set_pixel(ballx, bally, 127, 127, 0)
-                        sense.set_pixel(ennemix, ennemiy[0], 127, 127, 0)
-                        sense.set_pixel(ennemix, ennemiy[1], 127, 127, 0)
+                a = 0
+                while (a == 1):
+                    for event in events:
+                        if event.action == "pressed" and event.direction == "up":
+                            youy[0] = youy[1] + 1
+                            youy[1] = youy[1] + 1
+                            sense.set_pixel(youx, youy[0], 127, 127, 0)
+                            sense.set_pixel(youx, youy[1], 127, 127, 0)
+                            sense.set_pixel(ballx, bally, 127, 127, 0)
+                            sense.set_pixel(ennemix, ennemiy[0], 127, 127, 0)
+                            sense.set_pixel(ennemix, ennemiy[1], 127, 127, 0)
+                        elif event.action == "pressed" and event.direction == "down":
+                            youy[0] = youy[1] - 1
+                            youy[1] = youy[1] - 1
+                            sense.set_pixel(youx, youy[0], 127, 127, 0)
+                            sense.set_pixel(youx, youy[1], 127, 127, 0)
+                            sense.set_pixel(ballx, bally, 127, 127, 0)
+                            sense.set_pixel(ennemix, ennemiy[0], 127, 127, 0)
+                            sense.set_pixel(ennemix, ennemiy[1], 127, 127, 0)
+
             elif event.action == "pressed" and event.direction == "down":
                 extinction_message = "Arret..."
                 sense.show_message(extinction_message, text_colour=(127, 0, 0), scroll_speed=0.1)
