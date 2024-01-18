@@ -115,67 +115,67 @@ try:
                 sense.set_pixel(7, 7, 0, 127, 127)
                 while (a == 0):
                     events = sense.stick.get_events()
-                    if event.action == "pressed" and event.direction == "up":
-                        if not (youy[1] < 2):
-                            youy[0] = youy[0] - 1
-                            youy[1] = youy[1] - 1
-                    elif event.action == "pressed" and event.direction == "down":
-                        if not (youy[1] > 6):
-                            youy[0] = youy[0] + 1
-                            youy[1] = youy[1] + 1
-                    else:
-                        sense.clear()
-                        sense.set_pixel(youx, youy[0], 127, 127, 0)
-                        sense.set_pixel(youx, youy[1], 127, 127, 0)
-                        sense.set_pixel(ballx, bally, 127, 127, 0)
-                        sense.set_pixel(ennemix, ennemiy[0], 127, 127, 0)
-                        sense.set_pixel(ennemix, ennemiy[1], 127, 127, 0)
-                        sense.set_pixel(0, 0, 0, 127, 127)
-                        sense.set_pixel(1, 0, 0, 127, 127)
-                        sense.set_pixel(2, 0, 0, 127, 127)
-                        sense.set_pixel(3, 0, 0, 127, 127)
-                        sense.set_pixel(4, 0, 0, 127, 127)
-                        sense.set_pixel(5, 0, 0, 127, 127)
-                        sense.set_pixel(6, 0, 0, 127, 127)
-                        sense.set_pixel(7, 0, 0, 127, 127)
-                        sense.set_pixel(0, 7, 0, 127, 127)
-                        sense.set_pixel(1, 7, 0, 127, 127)
-                        sense.set_pixel(2, 7, 0, 127, 127)
-                        sense.set_pixel(3, 7, 0, 127, 127)
-                        sense.set_pixel(4, 7, 0, 127, 127)
-                        sense.set_pixel(5, 7, 0, 127, 127)
-                        sense.set_pixel(6, 7, 0, 127, 127)
-                        sense.set_pixel(7, 7, 0, 127, 127)
-                        if mx == 0:
-                            ballx = ballx + 1
-                        elif mx == 1:
-                            ballx = ballx - 1
-                        if my == 0:
-                            bally = bally + 1
-                        elif my == 1:
-                            bally = bally - 1
-                        if bally > 4 :
-                            ennemiy[0] = bally + 1
-                            ennemiy[1] = bally
-                            sleep(1)
-                        elif bally < 4:
-                            ennemiy[0] = bally
-                            ennemiy[1] = bally + 1
-                            sleep(1)
-                        if ballx == 6:
-                            mx = 1
-                        elif ballx == 1 and bally == (youy[0] or youy[1]):
-                            mx = 0
-                        elif ballx == 1 and not(bally == (youy[0] or youy[1])):
-                            mx = 0
-                            message = "Vous avez perdu !"
-                            sense.show_message(message, text_colour=(127, 0, 0), scroll_speed=0.1)
-                            a = 1
-                            break
-                        if bally == 6:
-                             my = 1
-                        elif bally == 1:
-                            my = 0
+                    sense.clear()
+                    if mx == 0:
+                        ballx = ballx + 1
+                    elif mx == 1:
+                        ballx = ballx - 1
+                    if my == 0:
+                        bally = bally + 1
+                    elif my == 1:
+                        bally = bally - 1
+                    sense.set_pixel(youx, youy[0], 127, 127, 0)
+                    sense.set_pixel(youx, youy[1], 127, 127, 0)
+                    sense.set_pixel(ballx, bally, 127, 127, 0)
+                    sense.set_pixel(ennemix, ennemiy[0], 127, 127, 0)
+                    sense.set_pixel(ennemix, ennemiy[1], 127, 127, 0)
+                    sense.set_pixel(0, 0, 0, 127, 127)
+                    sense.set_pixel(1, 0, 0, 127, 127)
+                    sense.set_pixel(2, 0, 0, 127, 127)
+                    sense.set_pixel(3, 0, 0, 127, 127)
+                    sense.set_pixel(4, 0, 0, 127, 127)
+                    sense.set_pixel(5, 0, 0, 127, 127)
+                    sense.set_pixel(6, 0, 0, 127, 127)
+                    sense.set_pixel(7, 0, 0, 127, 127)
+                    sense.set_pixel(0, 7, 0, 127, 127)
+                    sense.set_pixel(1, 7, 0, 127, 127)
+                    sense.set_pixel(2, 7, 0, 127, 127)
+                    sense.set_pixel(3, 7, 0, 127, 127)
+                    sense.set_pixel(4, 7, 0, 127, 127)
+                    sense.set_pixel(5, 7, 0, 127, 127)
+                    sense.set_pixel(6, 7, 0, 127, 127)
+                    sense.set_pixel(7, 7, 0, 127, 127)
+                    if bally > 4 :
+                        ennemiy[0] = bally + 1
+                        ennemiy[1] = bally
+                        sleep(1)
+                    elif bally < 4:
+                        ennemiy[0] = bally
+                        ennemiy[1] = bally + 1
+                        sleep(1)
+                    if ballx == 6:
+                        mx = 1
+                    elif ballx == 1 and bally == (youy[0] or youy[1]):
+                        mx = 0
+                    elif ballx == 1 and not(bally == (youy[0] or youy[1])):
+                        mx = 0
+                        message = "Vous avez perdu !"
+                        sense.show_message(message, text_colour=(127, 0, 0), scroll_speed=0.1)
+                        a = 1
+                        break
+                    if bally == 6:
+                        my = 1
+                    elif bally == 1:
+                        my = 0
+                    for event in events:
+                        if event.action == "pressed" and event.direction == "up":
+                            if not (youy[1] < 2):
+                                youy[0] = youy[0] - 1
+                                youy[1] = youy[1] - 1
+                        elif event.action == "pressed" and event.direction == "down":
+                            if not (youy[1] > 6):
+                                youy[0] = youy[0] + 1
+                                youy[1] = youy[1] + 1
             elif event.action == "pressed" and event.direction == "down":
                 extinction_message = "Arret..."
                 sense.show_message(extinction_message, text_colour=(127, 0, 0), scroll_speed=0.1)
