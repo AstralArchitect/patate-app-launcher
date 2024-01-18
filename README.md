@@ -22,7 +22,7 @@ sudo git clone https://github.com/AstralArchitect/python-sense-hat.git /root/ins
 
 Puis déplacez vous dans le dossier:
 ```
-sudo cd /root/installation/
+cd /root/installation/
 ```
 Enfin executez le script d'installation :
 ```

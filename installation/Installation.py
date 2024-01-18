@@ -18,6 +18,7 @@ try:
 
         # Boucle sur les événements du joystick
         for event in events:
+            print("appuyez sur le joysick du sense hat pour procedéder à l'installation.")
             if event.action == "pressed" and event.direction == "middle":
                 extinction_message = "installation..."
                 sense.show_message(extinction_message, text_colour=(90, 0, 127), scroll_speed=0.1)
@@ -40,7 +41,7 @@ try:
 
                 sense.set_pixel(3, 4, 90, 127, 0)
                 os.system("sudo rm /etc/rc.local")
-                os.system("sudo mv ./installation/rc.local /etc/")
+                os.system("sudo mv ./installation/rc.local /etc/rc.local")
                 os.system("sudo mv ./installation/start.sh /root/")
 
                 sense.set_pixel(4, 3, 90, 127, 0)
