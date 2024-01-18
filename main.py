@@ -96,7 +96,7 @@ try:
                 sense.set_pixel(ballx, bally, 127, 127, 0)
                 sense.set_pixel(ennemix, ennemiy[0], 127, 127, 0)
                 sense.set_pixel(ennemix, ennemiy[1], 127, 127, 0)
-                ense.set_pixel(0, 0, 0, 127, 127)
+                sense.set_pixel(0, 0, 0, 127, 127)
                 sense.set_pixel(0, 1, 0, 127, 127)
                 sense.set_pixel(0, 2, 0, 127, 127)
                 sense.set_pixel(0, 3, 0, 127, 127)
