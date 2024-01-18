@@ -40,7 +40,7 @@ try:
                 extinction_message = "Arret..."
                 sense.show_message(extinction_message, text_colour=(127, 0, 0), scroll_speed=0.1)
                 sleep(1)  # Attendre une seconde pour éviter une fermeture accidentelle
-                os.system("sudo shutdown")
+                os.system("sudo shutdown now")
             # Vérifier le type d'événement
             elif event.action == "pressed" and event.direction == "middle":
                 extinction_message = "Mise a jour..."
