@@ -86,6 +86,7 @@ try:
                 youy = [3, 4]
                 ennemix = 7
                 ennemiy = [3, 4]
+                m = 0
                 sleep(1)
                 a = 0
                 while (a == 0):
