@@ -171,9 +171,9 @@ try:
                             sense.show_message(message, text_colour=(127, 0, 0), scroll_speed=0.1)
                             a = 1
                             break
-                        if bally == 7:
+                        if bally == 6:
                              my = 1
-                        elif bally == 0:
+                        elif bally == 1:
                             my = 0
             elif event.action == "pressed" and event.direction == "down":
                 extinction_message = "Arret..."
