@@ -73,6 +73,7 @@ try:
                 
                 os.system("sudo mv /root/python/update/main.py /root/python/")
                 os.system("sudo mv /root/python/update/version.txt /root/python/")
+                os.system("sudo mv /root/python/update/python-test.py /root/python/")
 
                 sense.set_pixel(4, 3, 127, 127, 0)
 
