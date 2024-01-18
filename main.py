@@ -85,7 +85,7 @@ try:
 
                 sense.set_pixel(5, 4, 127, 127, 0)
 
-                os.system("sudo rm -r /root/python/update/.git /root/python/update/README.md")
+                os.system("sudo rm -r /root/python/update/.git /root/python/update/README.md /root/python/update/installation/")
 
                 sense.set_pixel(6, 3, 127, 127, 0)
 
