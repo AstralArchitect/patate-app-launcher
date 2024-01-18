@@ -81,8 +81,8 @@ try:
             elif event.action == "pressed" and event.direction == "up":
                 message = "pong..."
                 sense.show_message(message, text_colour=(127, 127, 0), scroll_speed=0.1)
-                ballx = 3
-                bally = 3
+                ballx = 4
+                bally = 4
                 youx = 0
                 youy = [3, 4]
                 ennemix = 7
@@ -93,7 +93,7 @@ try:
                     events = sense.stick.get_events()
                     for event in events:
                         if event.action == "pressed" and event.direction == "up":
-                            if not (youy[0] < 1):
+                            if not (youy[1] < 2):
                                 youy[0] = youy[0] - 1
                                 youy[1] = youy[1] - 1
                         elif event.action == "pressed" and event.direction == "down":
@@ -127,9 +127,6 @@ try:
                 os.system("sudo shutdown now")
             # Vérifier le type d'événement
             elif event.action == "pressed" and event.direction == "middle":
-                extinction_message = "Mise a jour..."
-                sense.show_message(extinction_message, text_colour=(127, 0, 127), scroll_speed=0.1)
-                sleep(1)  # Attendre une seconde pour éviter une fermeture accidentelle
                 
                 os.system("sudo rm -r /root/python/update/.git /root/python/update/*")
                 sense.set_pixel(0, 3, 127, 127, 0)
@@ -146,9 +143,20 @@ try:
                 vn = f2.read()
 
                 if v == vn:
-                    message = "Bonjour."
+                    message = "redemmarrage..."
                     sense.show_message(message, text_colour=(0, 0, 127), scroll_speed=0.1)
-                    break
+                    sleep(1)
+                    os.system("sudo reboot")
+                else:
+                    message = "Mise à jour..."
+                    sense.show_message(message, text_colour=(0, 0, 127), scroll_speed=0.1)
+                sense.set_pixel(0, 3, 127, 127, 0)
+
+                sense.set_pixel(0, 4, 127, 127, 0)
+                
+                sense.set_pixel(1, 3, 127, 127, 0)
+                
+                sense.set_pixel(1, 4, 127, 127, 0)
 
                 sense.set_pixel(2, 3, 127, 127, 0)
 
