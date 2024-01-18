@@ -149,11 +149,11 @@ try:
                     if bally > 4 :
                         ennemiy[0] = bally + 1
                         ennemiy[1] = bally
-                        sleep(0.7)
+                        sleep(temps)
                     elif bally < 4:
                         ennemiy[0] = bally
                         ennemiy[1] = bally + 1
-                        sleep(0.7)
+                        sleep(temps)
                     if ballx == 6:
                         mx = 1
                     elif ballx == 1 and bally == (youy[0] or youy[1]):
@@ -168,7 +168,7 @@ try:
                         my = 1
                     elif bally == 1:
                         my = 0
-                    temps = temps - 0.01
+                    temps = temps - 0.1
                     for event in events:
                         if event.action == "pressed" and event.direction == "up":
                             if not (youy[1] < 2):
