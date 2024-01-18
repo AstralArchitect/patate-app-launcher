@@ -82,7 +82,7 @@ try:
                 message = "pong..."
                 sense.show_message(message, text_colour=(127, 127, 0), scroll_speed=0.1)
                 ballx = 4
-                bally = 4
+                bally = 3
                 youx = 0
                 youy = [3, 4]
                 ennemix = 7
