@@ -1,4 +1,3 @@
-from datetime import datetime
 from sense_hat import SenseHat
 from time import sleep
 import os
@@ -32,7 +31,7 @@ try:
                 message = f'CPU:{cpu_usage:.1f}%, Mem:{memory_usage:.1f}%'
                 sense.show_message(message, text_colour=(0, 127, 0), scroll_speed=0.1)
             elif event.action == "pressed" and event.direction == "up":
-                os.system("sudo python3 pong-test.py")
+                os.system("sudo python3 /root/python/pong-test.py")
             elif event.action == "pressed" and event.direction == "down":
                 extinction_message = "Arret..."
                 sense.show_message(extinction_message, text_colour=(127, 0, 0), scroll_speed=0.1)
