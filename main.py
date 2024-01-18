@@ -87,18 +87,17 @@ try:
                 youy = [3, 4]
                 ennemix = 7
                 ennemiy = [3, 4]
-                m = 0
                 sleep(1)
                 a = 0
                 while (a == 0):
                     events = sense.stick.get_events()
                     for event in events:
                         if event.action == "pressed" and event.direction == "up":
-                            if not (youy[0] < 2 or youy[1] > 6):
+                            if not (youy[0] < 1):
                                 youy[0] = youy[0] - 1
                                 youy[1] = youy[1] - 1
                         elif event.action == "pressed" and event.direction == "down":
-                            if not (youy[0] < 2 or youy[1] > 6):
+                            if not (youy[1] > 6):
                                 youy[0] = youy[0] + 1
                                 youy[1] = youy[1] + 1
                         else:
@@ -108,9 +107,8 @@ try:
                             sense.set_pixel(ballx, bally, 127, 127, 0)
                             sense.set_pixel(ennemix, ennemiy[0], 127, 127, 0)
                             sense.set_pixel(ennemix, ennemiy[1], 127, 127, 0)
-                            if m == 0:
-                                ballx = ballx + 1
-                                bally = bally + 1
+                            ballx = ballx + 1
+                            bally = bally + 1
                         if bally > 4:
                             ennemiy[0] = bally
                             ennemiy[1] = bally + 1
