@@ -3,7 +3,7 @@ from sense_hat import SenseHat
 from time import sleep
 
 sense = SenseHat()
-message = "lancement du jeu..."
+message = "lancement de pong..."
 sense.show_message(message, text_colour=(127, 127, 0), scroll_speed=0.1)
 ballx = 3
 bally = 3
