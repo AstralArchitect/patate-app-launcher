@@ -1,3 +1,4 @@
+from datetime import datetime
 from sense_hat import SenseHat
 from time import sleep
 import os
@@ -32,8 +33,9 @@ try:
                 message = f'CPU:{cpu_usage:.1f}%, Mem:{memory_usage:.1f}%'
                 sense.show_message(message, text_colour=(0, 127, 0), scroll_speed=0.1)
             elif event.action == "pressed" and event.direction == "up":
-                message = datetime.date.today()
-                sense.show_message(message, text_colour=(127, 127, 0), scroll_speed=0.1)
+                date_actuelle = datetime.now()
+                date_formatee = date_actuelle.strftime("%d/%m/%Y %H:%M")
+                sense.show_message(date_formatee, text_colour=(127, 127, 0), scroll_speed=0.1)
             elif event.action == "pressed" and event.direction == "down":
                 extinction_message = "Arret..."
                 sense.show_message(extinction_message, text_colour=(127, 0, 0), scroll_speed=0.1)
