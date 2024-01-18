@@ -52,18 +52,19 @@ try:
                 
                 sense.set_pixel(1, 4, 127, 127, 0)
                 
-                sense.set_pixel(2, 3, 127, 127, 0)
-
-                sense.set_pixel(2, 4, 127, 127, 0)
-                os.system("sudo rm -r /root/python/update/.git /root/python/update/main.py")
+                os.system("sudo rm -r /root/python/update/.git /root/python/update/*")
                 os.system("sudo git clone https://github.com/AstralArchitect/python-sense-hat.git /root/python/update/")
-                os.system("sudo mv /root/python/update/* /root/python/")
-                os.system("sudo rm -r /root/python/update/.git /root/python/update/README.md /root/python/README.md")
+                os.system("sudo mv /root/python/update/main.py /root/python/")
+                os.system("sudo rm -r /root/python/update/.git /root/python/update/README.md")
 
                 sense.set_pixel(3, 3, 127, 127, 0)
 
                 sense.set_pixel(3, 4, 127, 127, 0)
                 os.system("sudo apt update -y")
+                sense.set_pixel(2, 3, 127, 127, 0)
+
+                sense.set_pixel(2, 4, 127, 127, 0)
+                
                 sense.set_pixel(4, 3, 127, 127, 0)
 
                 sense.set_pixel(4, 4, 127, 127, 0)
