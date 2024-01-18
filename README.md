@@ -26,7 +26,7 @@ sudo cd /root/installation/
 ```
 Enfin executez le script d'installation :
 ```
-sudo python3 installation/installation.py
+sudo python3 installation/Installation.py
 ```
 
 ## Executer le script automatiquement au démarrage :
