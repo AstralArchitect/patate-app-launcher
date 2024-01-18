@@ -2,6 +2,7 @@ from sense_hat import SenseHat
 from time import sleep
 import os
 import psutil
+import datetime
 
 # Initialiser l'objet SenseHat
 sense = SenseHat()
@@ -31,7 +32,7 @@ try:
                 message = f'CPU:{cpu_usage:.1f}%, Mem:{memory_usage:.1f}%'
                 sense.show_message(message, text_colour=(0, 127, 0), scroll_speed=0.1)
             elif event.action == "pressed" and event.direction == "up":
-                message = "hello"
+                message = datetime.date.today()
                 sense.show_message(message, text_colour=(127, 127, 0), scroll_speed=0.1)
             elif event.action == "pressed" and event.direction == "down":
                 extinction_message = "Arret..."
