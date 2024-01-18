@@ -148,16 +148,16 @@ try:
                     if bally > 4 :
                         ennemiy[0] = bally + 1
                         ennemiy[1] = bally
-                        sleep(1)
+                        sleep(0.7)
                     elif bally < 4:
                         ennemiy[0] = bally
                         ennemiy[1] = bally + 1
-                        sleep(1)
+                        sleep(0.7)
                     if ballx == 6:
                         mx = 1
                     elif ballx == 1 and bally == (youy[0] or youy[1]):
                         mx = 0
-                    elif ballx == 1 and not(bally == (youy[0] or youy[1])):
+                    elif ballx == 1 and not bally == (youy[0] or youy[1]):
                         mx = 0
                         message = "Vous avez perdu !"
                         sense.show_message(message, text_colour=(127, 0, 0), scroll_speed=0.1)
