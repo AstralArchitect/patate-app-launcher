@@ -117,19 +117,6 @@ try:
                 while (a == 0):
                     events = sense.stick.get_events()
                     sense.clear()
-                    if mx == 0:
-                        ballx = ballx + 1
-                    elif mx == 1:
-                        ballx = ballx - 1
-                    if my == 0:
-                        bally = bally + 1
-                    elif my == 1:
-                        bally = bally - 1
-                    sense.set_pixel(youx, youy[0], 127, 127, 0)
-                    sense.set_pixel(youx, youy[1], 127, 127, 0)
-                    sense.set_pixel(ballx, bally, 127, 127, 0)
-                    sense.set_pixel(ennemix, ennemiy[0], 127, 127, 0)
-                    sense.set_pixel(ennemix, ennemiy[1], 127, 127, 0)
                     sense.set_pixel(0, 0, 0, 127, 127)
                     sense.set_pixel(1, 0, 0, 127, 127)
                     sense.set_pixel(2, 0, 0, 127, 127)
@@ -146,6 +133,17 @@ try:
                     sense.set_pixel(5, 7, 0, 127, 127)
                     sense.set_pixel(6, 7, 0, 127, 127)
                     sense.set_pixel(7, 7, 0, 127, 127)
+                    if mx == 0:
+                        ballx = ballx + 1
+                    elif mx == 1:
+                        ballx = ballx - 1
+                    if my == 0:
+                        bally = bally + 1
+                    elif my == 1:
+                        bally = bally - 1
+                    sense.set_pixel(ballx, bally, 127, 127, 0)
+                    sense.set_pixel(ennemix, ennemiy[0], 127, 127, 0)
+                    sense.set_pixel(ennemix, ennemiy[1], 127, 127, 0)
                     if bally > 4 :
                         ennemiy[0] = bally + 1
                         ennemiy[1] = bally
@@ -168,12 +166,31 @@ try:
                         my = 1
                     elif bally == 1:
                         my = 0
-                    temps = temps - 0.1
+                    temps = temps - 0.01
                     for event in events:
                         if event.action == "pressed" and event.direction == "up":
                             if not (youy[1] < 2):
                                 youy[0] = youy[0] - 1
                                 youy[1] = youy[1] - 1
+                                sense.clear()
+                                sense.set_pixel(youx, youy[0], 127, 127, 0)
+                                sense.set_pixel(youx, youy[1], 127, 127, 0)
+                                sense.set_pixel(0, 0, 0, 127, 127)
+                                sense.set_pixel(1, 0, 0, 127, 127)
+                                sense.set_pixel(2, 0, 0, 127, 127)
+                                sense.set_pixel(3, 0, 0, 127, 127)
+                                sense.set_pixel(4, 0, 0, 127, 127)
+                                sense.set_pixel(5, 0, 0, 127, 127)
+                                sense.set_pixel(6, 0, 0, 127, 127)
+                                sense.set_pixel(7, 0, 0, 127, 127)
+                                sense.set_pixel(0, 7, 0, 127, 127)
+                                sense.set_pixel(1, 7, 0, 127, 127)
+                                sense.set_pixel(2, 7, 0, 127, 127)
+                                sense.set_pixel(3, 7, 0, 127, 127)
+                                sense.set_pixel(4, 7, 0, 127, 127)
+                                sense.set_pixel(5, 7, 0, 127, 127)
+                                sense.set_pixel(6, 7, 0, 127, 127)
+                                sense.set_pixel(7, 7, 0, 127, 127)
                         elif event.action == "pressed" and event.direction == "down":
                             if not (youy[1] > 6):
                                 youy[0] = youy[0] + 1
