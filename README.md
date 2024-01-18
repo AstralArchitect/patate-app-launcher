@@ -9,16 +9,17 @@ Créez le répertoir /root/installation/
 ```
 mkdir ./installation/
 ```
+Ensuit installez python3:
+
+```
+sudo apt install python3 git -y
+```
 
 Clonez le repo dans /root/installation/ en tapant les commandes : 
 ```
 sudo git clone https://github.com/AstralArchitect/python-sense-hat.git /root/installation/
 ```
-Ensuit installez python3:
 
-```
-sudo apt install python3
-```
 Puis déplacez vous dans le dossier:
 ```
 sudo cd /root/installation/
