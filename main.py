@@ -166,7 +166,7 @@ try:
                     break
                 else:
                     message = "Mise a jour..."
-                    sense.show_message(message, text_colour=(0, 0, 127), scroll_speed=0.1)
+                    sense.show_message(message, text_colour=(127, 0, 127), scroll_speed=0.1)
                 
                 sense.set_pixel(1, 3, 127, 127, 0)
                 
