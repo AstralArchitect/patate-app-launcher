@@ -116,6 +116,12 @@ try:
                 sense.set_pixel(5, 7, 0, 127, 127)
                 sense.set_pixel(6, 7, 0, 127, 127)
                 sense.set_pixel(7, 7, 0, 127, 127)
+                def afficher():
+                    sense.set_pixel(youx, youy[0], 127, 127, 0)
+                    sense.set_pixel(youx, youy[1], 127, 127, 0)
+                    sense.set_pixel(ballx, bally, 127, 127, 0)
+                    sense.set_pixel(ennemix, ennemiy[0], 127, 127, 0)
+                    sense.set_pixel(ennemix, ennemiy[1], 127, 127, 0)
                 sleep(0.5)
                 while (a == 0):
                     events = sense.stick.get_events()
@@ -160,21 +166,20 @@ try:
                         break
                     elif bally == 1:
                         my = 0
-                        temps = temps - 0.005 
+                        temps = temps - 0.005
+                    afficher()
                     for event in events:
                         if event.action == "pressed" and event.direction == "up":
                             if not (youy[1] < 2):
                                 youy[0] = youy[0] - 1
                                 youy[1] = youy[1] - 1
+                                afficher()
                         elif event.action == "pressed" and event.direction == "down":
                             if not (youy[1] > 6):
                                 youy[0] = youy[0] + 1
                                 youy[1] = youy[1] + 1
-                    sense.set_pixel(ballx, bally, 127, 127, 0)
-                    sense.set_pixel(ennemix, ennemiy[0], 127, 127, 0)
-                    sense.set_pixel(ennemix, ennemiy[1], 127, 127, 0)
-                    sense.set_pixel(youx, youy[0], 127, 127, 0)
-                    sense.set_pixel(youx, youy[1], 127, 127, 0)
+                                afficher()
+
             elif event.action == "pressed" and event.direction == "down":
                 extinction_message = "Arret..."
                 sense.show_message(extinction_message, text_colour=(127, 0, 0), scroll_speed=0.1)
