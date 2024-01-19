@@ -4,6 +4,7 @@ from time import sleep
 # Initialiser l'objet SenseHat
 sense = SenseHat()
 
+sense.clear()
 ballx = 4
 bally = 3
 youx = 0
