@@ -37,7 +37,7 @@ try:
                 
         os.system("sudo mv /root/python/update/main.py /root/python/")
         os.system("sudo mv /root/python/update/version.txt /root/python/")
-        os.system("mv /root/installation/pong.py /root/python")
+        os.system("sudo mv /root/installation/pong.py /root/python/")
 
         sense.set_pixel(4, 3, 127, 127, 0)
 
@@ -137,7 +137,7 @@ try:
                 
                 os.system("sudo mv /root/python/update/main.py /root/python/")
                 os.system("sudo mv /root/python/update/version.txt /root/python/")
-                os.system("mv /root/installation/pong.py /root/python")
+                os.system("sudo mv /root/installation/pong.py /root/python/")
                 sleep(0.1)
                 sense.set_pixel(4, 3, 127, 127, 0)
 
