@@ -57,8 +57,7 @@ try:
 
         sense.set_pixel(7, 4, 127, 127, 0)
         sleep(1)
-        python = sys.executable
-        os.execl(python, python, *sys.argv)
+        os.system("sudo reboot")
         sleep(1)
     welcome_message = "Bonjour."
     sense.show_message(welcome_message, text_colour=(0, 0, 127), scroll_speed=0.1)
@@ -157,8 +156,7 @@ try:
 
                 sense.set_pixel(7, 4, 127, 127, 0)
                 sleep(1) # Attendre une seconde pour éviter une fermeture accidentelle
-                python = sys.executable
-                os.execl(python, python, *sys.argv)
+                os.system("sudo reboot")
 
         # Attendre quelques secondes avant de répéter
         sleep(3)
