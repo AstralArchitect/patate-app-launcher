@@ -125,6 +125,11 @@ try:
                     sense.set_pixel(7, 7, 0, 127, 127)
                 sleep(0.5)
                 while (a == 0):
+                    sense.set_pixel(youx, youy[0], 0, 0, 0)
+                    sense.set_pixel(youx, youy[1], 0, 0, 0)
+                    sense.set_pixel(ballx, bally, 0, 0, 0)
+                    sense.set_pixel(ennemix, ennemiy[0], 0, 0, 0)
+                    sense.set_pixel(ennemix, ennemiy[1], 0, 0, 0)
                     events = sense.stick.get_events()
                     if mx == 0:
                         ballx = ballx + 1
@@ -163,11 +168,6 @@ try:
                     elif bally == 1:
                         my = 0
                         temps = temps - 0.005
-                    sense.set_pixel(youx, youy[0], 0, 0, 0)
-                    sense.set_pixel(youx, youy[1], 0, 0, 0)
-                    sense.set_pixel(ballx, bally, 0, 0, 0)
-                    sense.set_pixel(ennemix, ennemiy[0], 0, 0, 0)
-                    sense.set_pixel(ennemix, ennemiy[1], 0, 0, 0)
                     afficher()
                     for event in events:
                         if event.action == "pressed" and event.direction == "up":
