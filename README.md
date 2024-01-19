@@ -46,9 +46,9 @@ Pour voire la température la pression et l'humidité poussez le joystick du sen
 
 Attention: la température peut être fausse car le capteur se trouve près de votre ordinateur qui chauffe
 
-## 3. Date : 
+## 3. Pong(Béta) : 
 
-Pour voir la date poussez le joystick de votre sense hat vers le haut
+Pour pouvoir jouer au jeu de pong(béta), poussez le joystick vers le haut.
 
 ## 4. Mise à jour :
 
