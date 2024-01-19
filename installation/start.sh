@@ -2,4 +2,7 @@
 
 cd /root/python/
 
-python main.py
+while true
+do
+    python3 main.py
+done
