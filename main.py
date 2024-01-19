@@ -109,8 +109,7 @@ try:
                     message = "redemmarrage..."
                     sense.show_message(message, text_colour=(0, 0, 127), scroll_speed=0.1)
                     sleep(0.5)
-                    os.system("sudo reboot")
-                    break
+                    sys.exit()
                 else:
                     message = "Mise a jour..."
                     sense.show_message(message, text_colour=(127, 0, 127), scroll_speed=0.1)
