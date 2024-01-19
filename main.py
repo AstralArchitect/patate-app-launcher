@@ -174,11 +174,15 @@ try:
                     for event in events:
                         if event.action == "pressed" and event.direction == "up":
                             if not (youy[1] < 2):
+                                sense.set_pixel(youx, youy[0], 0, 0, 0)
+                                sense.set_pixel(youx, youy[1], 0, 0, 0)
                                 youy[0] = youy[0] - 1
                                 youy[1] = youy[1] - 1
                                 afficher()
                         elif event.action == "pressed" and event.direction == "down":
                             if not (youy[1] > 6):
+                                sense.set_pixel(youx, youy[0], 0, 0, 0)
+                                sense.set_pixel(youx, youy[1], 0, 0, 0)
                                 youy[0] = youy[0] + 1
                                 youy[1] = youy[1] + 1
                                 afficher()
