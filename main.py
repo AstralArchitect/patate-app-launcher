@@ -85,6 +85,7 @@ try:
             elif event.action == "pressed" and event.direction == "up":
                 message = "pong..."
                 sense.show_message(message, text_colour=(127, 127, 0), scroll_speed=0.1)
+                os.system("python3 /root/python/pong.py")
             elif event.action == "pressed" and event.direction == "down":
                 extinction_message = "Arret..."
                 sense.show_message(extinction_message, text_colour=(127, 0, 0), scroll_speed=0.1)

@@ -4,7 +4,6 @@ from time import sleep
 # Initialiser l'objet SenseHat
 sense = SenseHat()
 
-sense.show_message(message, text_colour=(127, 127, 0), scroll_speed=0.1)
 ballx = 4
 bally = 3
 youx = 0
@@ -39,23 +38,11 @@ sense.set_pixel(6, 7, 0, 127, 127)
 sense.set_pixel(7, 7, 0, 127, 127)
 while (a == 0):
     events = sense.stick.get_events()
-    sense.clear()
-    sense.set_pixel(0, 0, 0, 127, 127)
-    sense.set_pixel(1, 0, 0, 127, 127)
-    sense.set_pixel(2, 0, 0, 127, 127)
-    sense.set_pixel(3, 0, 0, 127, 127)
-    sense.set_pixel(4, 0, 0, 127, 127)
-    sense.set_pixel(5, 0, 0, 127, 127)
-    sense.set_pixel(6, 0, 0, 127, 127)
-    sense.set_pixel(7, 0, 0, 127, 127)
-    sense.set_pixel(0, 7, 0, 127, 127)
-    sense.set_pixel(1, 7, 0, 127, 127)
-    sense.set_pixel(2, 7, 0, 127, 127)
-    sense.set_pixel(3, 7, 0, 127, 127)
-    sense.set_pixel(4, 7, 0, 127, 127)
-    sense.set_pixel(5, 7, 0, 127, 127)
-    sense.set_pixel(6, 7, 0, 127, 127)
-    sense.set_pixel(7, 7, 0, 127, 127)
+    sense.set_pixel(ballx, bally, 0, 0, 0)
+    sense.set_pixel(ennemix, ennemiy[0], 0, 0, 0)
+    sense.set_pixel(ennemix, ennemiy[1], 0, 0, 0)
+    sense.set_pixel(youx, youy[0], 0, 0, 0)
+    sense.set_pixel(youx, youy[1], 0, 0, 0)
     if mx == 0:
         ballx = ballx + 1
     elif mx == 1:
