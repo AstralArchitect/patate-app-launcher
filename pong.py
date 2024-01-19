@@ -84,6 +84,12 @@ while (a == 0):
     elif bally == 1:
         my = 0
     temps = temps - 0.005
+    #afficher
+    sense.set_pixel(ballx, bally, 127, 127, 0)
+    sense.set_pixel(ennemix, ennemiy[0], 127, 127, 0)
+    sense.set_pixel(ennemix, ennemiy[1], 127, 127, 0)
+    sense.set_pixel(youx, youy[0], 127, 127, 0)
+    sense.set_pixel(youx, youy[1], 127, 127, 0)
     #actions des joysticks 
     for event in events:
         if event.action == "pressed" and event.direction == "up":
@@ -95,9 +101,3 @@ while (a == 0):
             if not (youy[1] > 6):
                 youy[0] = youy[0] + 1
                 youy[1] = youy[1] + 1
-    #afficher
-    sense.set_pixel(ballx, bally, 127, 127, 0)
-    sense.set_pixel(ennemix, ennemiy[0], 127, 127, 0)
-    sense.set_pixel(ennemix, ennemiy[1], 127, 127, 0)
-    sense.set_pixel(youx, youy[0], 127, 127, 0)
-    sense.set_pixel(youx, youy[1], 127, 127, 0)
