@@ -123,6 +123,7 @@ try:
                     sense.set_pixel(ennemix, ennemiy[0], 127, 127, 0)
                     sense.set_pixel(ennemix, ennemiy[1], 127, 127, 0)
                     sense.set_pixel(7, 7, 0, 127, 127)
+                    print("hello")
                 sleep(0.5)
                 while (a == 0):
                     sense.set_pixel(youx, youy[0], 0, 0, 0)
