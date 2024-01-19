@@ -39,20 +39,17 @@ sense.set_pixel(7, 7, 0, 127, 127)
 sleep(0.5)
 while (a == 0):
     events = sense.stick.get_events()
-    #reinitialisation des pixels
     sense.set_pixel(ballx, bally, 0, 0, 0)
     sense.set_pixel(ennemix, ennemiy[0], 0, 0, 0)
     sense.set_pixel(ennemix, ennemiy[1], 0, 0, 0)
     sense.set_pixel(youx, youy[0], 0, 0, 0)
     sense.set_pixel(youx, youy[1], 0, 0, 0)
-    #afficher
     sense.set_pixel(ballx, bally, 127, 127, 0)
     sense.set_pixel(ennemix, ennemiy[0], 127, 127, 0)
     sense.set_pixel(ennemix, ennemiy[1], 127, 127, 0)
     sense.set_pixel(youx, youy[0], 127, 127, 0)
     sense.set_pixel(youx, youy[1], 127, 127, 0)
     print("marché")
-    #mouvements de la balle
     if mx == 0:
         ballx = ballx + 1
     elif mx == 1:
@@ -61,7 +58,6 @@ while (a == 0):
         bally = bally + 1
     elif my == 1:
         bally = bally - 1
-    #mouvement de l'ennemi
     if bally > 4 :
         ennemiy[0] = bally + 1
         ennemiy[1] = bally
@@ -70,7 +66,6 @@ while (a == 0):
         ennemiy[0] = bally
         ennemiy[1] = bally + 1
         sleep(temps)
-    #rebond de la balle
     if ballx == 6:
         mx = 1
     elif ballx == 1 and bally == (youy[0] or youy[1]):
@@ -91,14 +86,12 @@ while (a == 0):
         break
     elif bally == 1:
         my = 0
-    temps = temps - 0.005
-    #actions des joysticks 
+    temps = temps - 0.005 
     for event in events:
         if event.action == "pressed" and event.direction == "up":
             if not (youy[1] < 2):
                 youy[0] = youy[0] - 1
                 youy[1] = youy[1] - 1
-                sense.clear()
         elif event.action == "pressed" and event.direction == "down":
             if not (youy[1] > 6):
                 youy[0] = youy[0] + 1
