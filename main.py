@@ -37,7 +37,6 @@ try:
                 
         os.system("sudo mv /root/python/update/main.py /root/python/")
         os.system("sudo mv /root/python/update/version.txt /root/python/")
-        os.system("sudo mv /root/installation/pong.py /root/python/")
 
         sense.set_pixel(4, 3, 127, 127, 0)
 
@@ -58,7 +57,6 @@ try:
         sense.set_pixel(7, 4, 127, 127, 0)
         sleep(1)
         sys.exit()
-        sleep(1)
     welcome_message = "Bonjour."
     sense.show_message(welcome_message, text_colour=(0, 0, 127), scroll_speed=0.1)
 
@@ -85,6 +83,7 @@ try:
             elif event.action == "pressed" and event.direction == "up":
                 message = "pong..."
                 sense.show_message(message, text_colour=(127, 127, 0), scroll_speed=0.1)
+                sense.clear()
                 ballx = 4
                 bally = 3
                 youx = 0
@@ -224,7 +223,6 @@ try:
                 
                 os.system("sudo mv /root/python/update/main.py /root/python/")
                 os.system("sudo mv /root/python/update/version.txt /root/python/")
-                os.system("sudo mv /root/installation/pong.py /root/python/")
                 sleep(0.1)
                 sense.set_pixel(4, 3, 127, 127, 0)
 
