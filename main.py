@@ -176,6 +176,8 @@ try:
                             if not (youy[1] < 2):
                                 sense.set_pixel(youx, youy[0], 0, 0, 0)
                                 sense.set_pixel(youx, youy[1], 0, 0, 0)
+                                sense.set_pixel(0, 0, 0, 127, 127)
+                                sense.set_pixel(0, 7, 0, 127, 127)
                                 youy[0] = youy[0] - 1
                                 youy[1] = youy[1] - 1
                                 afficher()
@@ -183,6 +185,8 @@ try:
                             if not (youy[1] > 6):
                                 sense.set_pixel(youx, youy[0], 0, 0, 0)
                                 sense.set_pixel(youx, youy[1], 0, 0, 0)
+                                sense.set_pixel(0, 0, 0, 127, 127)
+                                sense.set_pixel(0, 7, 0, 127, 127)
                                 youy[0] = youy[0] + 1
                                 youy[1] = youy[1] + 1
                                 afficher()
