@@ -281,7 +281,7 @@ try:
                 sys.exit()
 
         # Attendre quelques secondes avant de répéter
-        sleep(3)
+        sleep(1)
 
 except KeyboardInterrupt:
     # Terminer le programme proprement lorsqu'on appuie sur Ctrl+C
