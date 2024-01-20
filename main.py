@@ -134,9 +134,9 @@ try:
                     sense.set_pixel(ennemix, ennemiy[1], 0, 0, 0)
                     events = sense.stick.get_events()
                     if mx == 0:
-                        ballx = ballx + int(randint(0, 1))
+                        ballx = ballx + 1
                     elif mx == 1:
-                        ballx = ballx - int(randint(0, 1))
+                        ballx = ballx - 1
                     if my == 0:
                         bally = bally + int(randint(0, 1))
                     elif my == 1:
