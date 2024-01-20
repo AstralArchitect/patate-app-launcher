@@ -171,7 +171,7 @@ try:
                         break
                     elif bally == 1:
                         my = 0
-                        temps = temps - 0.005
+                        temps = temps - 0.01
                     for event in events:
                         if event.action == "pressed" and event.direction == "up":
                             if not (youy[1] < 2):
