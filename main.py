@@ -15,7 +15,7 @@ try:
 
     sense.set_pixel(0, 4, 127, 127, 0)
                 
-    os.system("sudo wget https://raw.githubusercontent.com/AstralArchitect/python-sense-hat/main/version.txt /root/python/update/")
+    os.system("cd /root/python/update/;sudo wget https://raw.githubusercontent.com/AstralArchitect/python-sense-hat/main/version.txt /root/python/update/")
     f = open("/root/python/version.txt")
     f2 = open("/root/python/update/version.txt")
     v = f.read()
@@ -225,7 +225,7 @@ try:
 
                 sense.set_pixel(0, 4, 127, 127, 0)
                 
-                os.system("sudo wget https://raw.githubusercontent.com/AstralArchitect/python-sense-hat/main/version.txt /root/python/update/")
+                os.system("cd /root/python/update/;sudo wget https://raw.githubusercontent.com/AstralArchitect/python-sense-hat/main/version.txt /root/python/update/")
                 f = open("/root/python/version.txt")
                 f2 = open("/root/python/update/version.txt")
                 v = f.read()
