@@ -11,7 +11,7 @@ sense = SenseHat()
 try:
     sense.clear()
     #mise a jour du programme en allant chercher sur github
-    os.system("sudo rm -r /root/python/update/.git /root/python/update/*")
+    os.system("sudo rm -r /root/python/update/*")
     sense.set_pixel(0, 3, 127, 127, 0)
 
     sense.set_pixel(0, 4, 127, 127, 0)
