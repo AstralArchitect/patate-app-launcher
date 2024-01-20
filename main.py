@@ -3,7 +3,7 @@ from time import sleep
 import os
 import psutil
 import sys
-import random
+from random import randint
 
 # Initialiser l'objet SenseHat
 sense = SenseHat()
@@ -134,13 +134,13 @@ try:
                     sense.set_pixel(ennemix, ennemiy[1], 0, 0, 0)
                     events = sense.stick.get_events()
                     if mx == 0:
-                        ballx = ballx + int(random())
+                        ballx = ballx + int(randint(0, 1))
                     elif mx == 1:
-                        ballx = ballx - int(random())
+                        ballx = ballx - int(randint(0, 1))
                     if my == 0:
-                        bally = bally + int(random())
+                        bally = bally + int(randint(0, 1))
                     elif my == 1:
-                        bally = bally - int(random())
+                        bally = bally - int(randint(0, 1))
                     if bally > 4 :
                         ennemiy[0] = bally + 1
                         ennemiy[1] = bally
