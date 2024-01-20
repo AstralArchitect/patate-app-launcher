@@ -153,9 +153,10 @@ try:
                         sleep(temps)
                     if ballx == 6:
                         mx = 1
-                    elif ballx == 1 and bally == (youy[0] or youy[1]):
+                    elif (ballx == 1 and bally == youy[0]) or (ballx == 1 and bally == youy[1]):
                         mx = 0
-                    elif ballx == 1 and not bally == (youy[0] or youy[1]):
+                        break
+                    elif (ballx == 1) and (not (bally == ((youy[0]) or (youy[1])))):
                         mx = 0
                         message = "Vous avez perdu !"
                         sense.show_message(message, text_colour=(127, 0, 0), scroll_speed=0.1)
