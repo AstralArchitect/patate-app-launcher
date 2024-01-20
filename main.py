@@ -153,7 +153,7 @@ try:
                         sleep(temps)
                     if ballx == 6:
                         mx = 1
-                    elif (ballx == 1 and bally == youy[0]) or (ballx == 1 and bally == youy[1]):
+                    elif (ballx == 1 and bally == youy[1]) or (ballx == 1 and bally == youy[0]):
                         mx = 0
                     elif (ballx == 1) and (not (bally == ((youy[0]) or (youy[1])))):
                         mx = 0
