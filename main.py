@@ -15,7 +15,7 @@ try:
 
     sense.set_pixel(0, 4, 127, 127, 0)
                 
-    os.system("sudo git clone https://github.com/AstralArchitect/python-sense-hat.git /root/python/update/")
+    os.system("sudo wget https://raw.githubusercontent.com/AstralArchitect/python-sense-hat/main/version.txt /root/python/update/")
     f = open("/root/python/version.txt")
     f2 = open("/root/python/update/version.txt")
     v = f.read()
@@ -24,6 +24,8 @@ try:
     if v == vn:
         b = 0
     if b == 1:
+        os.system("sudo rm -r /root/python/update/.git /root/python/update/version.txt")
+        os.system("sudo git clone https://github.com/AstralArchitect/python-sense-hat.git /root/python/update/")
         sense.set_pixel(1, 3, 127, 127, 0)
                 
         sense.set_pixel(1, 4, 127, 127, 0)
@@ -124,15 +126,8 @@ try:
                     sense.set_pixel(ennemix, ennemiy[0], 127, 127, 0)
                     sense.set_pixel(ennemix, ennemiy[1], 127, 127, 0)
                     sense.set_pixel(7, 7, 0, 127, 127)
-                    print("hello")
                 sleep(0.5)
                 while (a == 0):
-                    sense.set_pixel(youx, youy[0], 0, 0, 0)
-                    sense.set_pixel(youx, youy[1], 0, 0, 0)
-                    sense.set_pixel(ballx, bally, 0, 0, 0)
-                    sense.set_pixel(ennemix, ennemiy[0], 0, 0, 0)
-                    sense.set_pixel(ennemix, ennemiy[1], 0, 0, 0)
-                    events = sense.stick.get_events()
                     for event in events:
                         if event.action == "pressed" and event.direction == "up":
                             if not (youy[1] < 2):
@@ -152,6 +147,12 @@ try:
                                 youy[0] = youy[0] + 1
                                 youy[1] = youy[1] + 1
                                 afficher()
+                    sense.set_pixel(youx, youy[0], 0, 0, 0)
+                    sense.set_pixel(youx, youy[1], 0, 0, 0)
+                    sense.set_pixel(ballx, bally, 0, 0, 0)
+                    sense.set_pixel(ennemix, ennemiy[0], 0, 0, 0)
+                    sense.set_pixel(ennemix, ennemiy[1], 0, 0, 0)
+                    events = sense.stick.get_events()
                     if mx == 0:
                         ballx = ballx + 1
                     elif mx == 1:
@@ -224,7 +225,7 @@ try:
 
                 sense.set_pixel(0, 4, 127, 127, 0)
                 
-                os.system("sudo git clone https://github.com/AstralArchitect/python-sense-hat.git /root/python/update/")
+                os.system("sudo wget https://raw.githubusercontent.com/AstralArchitect/python-sense-hat/main/version.txt /root/python/update/")
                 f = open("/root/python/version.txt")
                 f2 = open("/root/python/update/version.txt")
                 v = f.read()
@@ -241,6 +242,8 @@ try:
                 sense.set_pixel(0, 3, 127, 127, 0)
 
                 sense.set_pixel(0, 4, 127, 127, 0)
+                os.system("sudo rm -r /root/python/update/.git /root/python/update/version.txt")
+                os.system("sudo git clone https://github.com/AstralArchitect/python-sense-hat.git /root/python/update/")
                 sleep(0.1)
                 
                 sense.set_pixel(1, 3, 127, 127, 0)
@@ -281,7 +284,7 @@ try:
                 sys.exit()
 
         # Attendre quelques secondes avant de répéter
-        sleep(1)
+        sleep(2)
 
 except KeyboardInterrupt:
     # Terminer le programme proprement lorsqu'on appuie sur Ctrl+C
