@@ -10,6 +10,7 @@ sense = SenseHat()
 
 try:
     sense.clear()
+    #mise a jour du programme en allant chercher sur github
     os.system("sudo rm -r /root/python/update/.git /root/python/update/*")
     sense.set_pixel(0, 3, 127, 127, 0)
 
@@ -69,6 +70,7 @@ try:
 
         # Boucle sur les événements du joystick
         for event in events:
+            #donner la pression l'humidité et la température
             if event.action == "pressed" and event.direction == "right":
                 temperature = sense.get_temperature()
                 pressure = sense.get_pressure()
@@ -77,12 +79,14 @@ try:
                 message = f'T:{temperature:.1f}C, P:{pressure:.1f} hPa, H:{humidity:.1f}%'
                 sense.show_message(message, text_colour=(0, 0, 127), scroll_speed=0.1)
 
+            #donner l'utilisation du CPU et de la mémoire
             elif event.action == "pressed" and event.direction == "left":
                 cpu_usage = psutil.cpu_percent()
                 memory_usage = psutil.virtual_memory().percent
 
                 message = f'CPU:{cpu_usage:.1f}%, Mem:{memory_usage:.1f}%'
                 sense.show_message(message, text_colour=(0, 127, 0), scroll_speed=0.1)
+            #jouer à pong
             elif event.action == "pressed" and event.direction == "up":
                 message = "pong..."
                 sense.show_message(message, text_colour=(127, 127, 0), scroll_speed=0.1)
@@ -192,13 +196,13 @@ try:
                     elif bally == 1:
                         my = 0
                         temps = temps - 0.01
-                    
+            #éteindre l'ordinateur
             elif event.action == "pressed" and event.direction == "down":
                 extinction_message = "Arret..."
                 sense.show_message(extinction_message, text_colour=(127, 0, 0), scroll_speed=0.1)
                 sleep(1)  # Attendre une seconde pour éviter une fermeture accidentelle
                 os.system("sudo shutdown now")
-            # Vérifier le type d'événement
+            # Mettre à jour le programme
             elif event.action == "pressed" and event.direction == "middle":
                 
                 os.system("sudo rm -r /root/python/update/.git /root/python/update/*")
