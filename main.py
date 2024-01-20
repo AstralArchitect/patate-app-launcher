@@ -16,7 +16,7 @@ try:
 
     sense.set_pixel(0, 4, 127, 127, 0)
                 
-    os.system("cd /root/python/update/;sudo wget https://raw.githubusercontent.com/AstralArchitect/python-sense-hat/main/version.txt /root/python/update/")
+    os.system("sudo git clone https://github.com/AstralArchitect/python-sense-hat.git /root/python/update/")
     f = open("/root/python/version.txt")
     f2 = open("/root/python/update/version.txt")
     v = f.read()
@@ -25,8 +25,7 @@ try:
     if v == vn:
         b = 0
     if b == 1:
-        os.system("sudo rm -r /root/python/update/.git /root/python/update/version.txt")
-        os.system("sudo git clone https://github.com/AstralArchitect/python-sense-hat.git /root/python/update/")
+        os.system("sudo rm -r /root/python/update/.git")
         sense.set_pixel(1, 3, 127, 127, 0)
                 
         sense.set_pixel(1, 4, 127, 127, 0)
