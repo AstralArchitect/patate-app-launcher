@@ -51,6 +51,7 @@ try:
             sense.set_pixel(5, 3, 90, 127, 0)
 
             sense.set_pixel(5, 4, 90, 127, 0)
+            os.system("apt-get install python3-psutil")
 
             sense.set_pixel(6, 3, 90, 127, 0)
 
