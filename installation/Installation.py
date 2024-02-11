@@ -45,7 +45,7 @@ try:
             sense.set_pixel(4, 3, 90, 127, 0)
 
             sense.set_pixel(4, 4, 90, 127, 0)
-
+            os.system("rm -r /root/python/")
             os.system("mkdir /root/python/")
             os.system("mv /root/installation/* /root/python/")
             sense.set_pixel(5, 3, 90, 127, 0)
