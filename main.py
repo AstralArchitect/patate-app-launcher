@@ -106,6 +106,7 @@ try:
                 move_thread = threading.Thread(target=move)
                 move_thread.start()
                 def ball():
+                    global a, temps
                     while (a == 0):
                         sense.set_pixel(youx, youy[0], 0, 0, 0)
                         sense.set_pixel(youx, youy[1], 0, 0, 0)
