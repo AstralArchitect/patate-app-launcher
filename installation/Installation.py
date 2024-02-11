@@ -64,5 +64,6 @@ try:
             sleep(1) # Attendre une seconde pour éviter une fermeture accidentelle
             os.system("sudo reboot")
 
-        # Attendre quelques secondes avant de répéter
-        sleep(3)
+except KeyboardInterrupt:
+    # This block is to handle if the user interrupts the script with Ctrl+C
+    pass
