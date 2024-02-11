@@ -202,7 +202,6 @@ try:
                 sense.set_pixel(7, 3, 127, 127, 0)
 
                 sense.set_pixel(7, 4, 127, 127, 0)
-                sleep(1) # Attendre une seconde pour éviter une fermeture accidentelle
                 sys.exit()
 
         # Attendre quelques secondes avant de répéter
