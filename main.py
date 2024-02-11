@@ -4,6 +4,7 @@ import os
 import psutil
 import sys
 from random import randint
+import threading
 
 # Initialiser l'objet SenseHat
 sense = SenseHat()
@@ -101,7 +102,8 @@ try:
                                     youy[0] = youy[0] + 1
                                     youy[1] = youy[1] + 1
                                     afficher()
-                move()
+                move_thread = threading.Thread(target=move)
+                move_thread.start()
                 while (a == 0):
                     sense.set_pixel(youx, youy[0], 0, 0, 0)
                     sense.set_pixel(youx, youy[1], 0, 0, 0)
