@@ -52,6 +52,22 @@ try:
                 my = 0
                 temps = 1.5
                 a = 0
+                sense.set_pixel(0, 0, 0, 127, 127)
+                sense.set_pixel(1, 0, 0, 127, 127)
+                sense.set_pixel(2, 0, 0, 127, 127)
+                sense.set_pixel(3, 0, 0, 127, 127)
+                sense.set_pixel(4, 0, 0, 127, 127)
+                sense.set_pixel(5, 0, 0, 127, 127)
+                sense.set_pixel(6, 0, 0, 127, 127)
+                sense.set_pixel(7, 0, 0, 127, 127)
+                sense.set_pixel(0, 7, 0, 127, 127)
+                sense.set_pixel(1, 7, 0, 127, 127)
+                sense.set_pixel(2, 7, 0, 127, 127)
+                sense.set_pixel(3, 7, 0, 127, 127)
+                sense.set_pixel(4, 7, 0, 127, 127)
+                sense.set_pixel(5, 7, 0, 127, 127)
+                sense.set_pixel(6, 7, 0, 127, 127)
+                sense.set_pixel(7, 7, 0, 127, 127)
 
                 # Définissez la fonction afficher()
                 def afficher():
