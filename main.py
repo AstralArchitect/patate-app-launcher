@@ -82,6 +82,7 @@ try:
                     sense.set_pixel(7, 7, 0, 127, 127)
                 sleep(0.5)
                 def move():
+                    global a
                     while(a == 0):
                         events = sense.stick.get_events()
                         for event in events:
@@ -106,7 +107,7 @@ try:
                 move_thread = threading.Thread(target=move)
                 move_thread.start()
                 def ball():
-                    global a, temps
+                    global a, temps, my, ennemix, ennemiy, youx, youy, ballx, bally
                     while (a == 0):
                         sense.set_pixel(youx, youy[0], 0, 0, 0)
                         sense.set_pixel(youx, youy[1], 0, 0, 0)
