@@ -47,7 +47,7 @@ try:
             sense.set_pixel(4, 4, 90, 127, 0)
             os.system("rm -r /root/python/")
             os.system("mkdir /root/python/")
-            os.system("mv /root/installation/* /root/python/")
+            os.system("mv /root/installation/ /root/python/")
             sense.set_pixel(5, 3, 90, 127, 0)
 
             sense.set_pixel(5, 4, 90, 127, 0)
@@ -56,12 +56,11 @@ try:
             sense.set_pixel(6, 3, 90, 127, 0)
 
             sense.set_pixel(6, 4, 90, 127, 0)
-            os.system("rm -r /root/installation/")
 
             sense.set_pixel(7, 3, 90, 127, 0)
 
             sense.set_pixel(7, 4, 90, 127, 0)
-            sleep(1) # Attendre une seconde pour éviter une fermeture accidentelle
+            sleep(0.5) # Attendre une seconde pour éviter une fermeture accidentelle
             os.system("sudo reboot")
 
 except KeyboardInterrupt:
