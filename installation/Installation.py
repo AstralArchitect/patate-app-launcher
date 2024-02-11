@@ -40,16 +40,15 @@ try:
             os.system("rm /etc/rc.local")
             os.system("mv /root/installation/installation/rc.local /etc/rc.local")
             os.system("mv /root/installation/installation/start.sh /root/")
-            os.system("chmod +x /root/start.sh")
-            os.system("chmod +x /etc/rc.local")
+            os.system("chmod 555 /root/start.sh")
+            os.system("chmod 555 /etc/rc.local")
 
             sense.set_pixel(4, 3, 90, 127, 0)
 
             sense.set_pixel(4, 4, 90, 127, 0)
 
-            os.system("mkdir /root/python/ /root/python/update/")
+            os.system("mkdir /root/python/")
             os.system("mv /root/installation/main.py /root/python/")
-            os.system("mv /root/installation/version.txt /root/python/")
             sense.set_pixel(5, 3, 90, 127, 0)
 
             sense.set_pixel(5, 4, 90, 127, 0)
