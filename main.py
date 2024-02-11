@@ -10,8 +10,8 @@ import threading
 sense = SenseHat()
 
 try:
-    sense.clear()
     welcome_message = "Bonjour."
+    sense.clear()
     sense.show_message(welcome_message, text_colour=(0, 0, 127), scroll_speed=0.1)
 
     while True:
