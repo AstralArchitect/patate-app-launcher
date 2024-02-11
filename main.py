@@ -50,7 +50,7 @@ try:
                 ennemiy = [3, 4]
                 mx = 0
                 my = 0
-                temps = 1.5
+                temps = 1
                 a = 0
                 sense.set_pixel(0, 0, 0, 127, 127)
                 sense.set_pixel(1, 0, 0, 127, 127)
@@ -155,7 +155,7 @@ try:
                             break
                         elif bally == 1:
                             my = 0
-                            temps = temps - 0.01
+                            temps = temps - 0.08
 
                 ball_thread = threading.Thread(target=ball)
                 ball_thread.start()
