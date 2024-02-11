@@ -80,26 +80,29 @@ try:
                     sense.set_pixel(ennemix, ennemiy[1], 127, 127, 0)
                     sense.set_pixel(7, 7, 0, 127, 127)
                 sleep(0.5)
+                def move():
+                    while(a == 0):
+                        for event in events:
+                            if event.action == "pressed" and event.direction == "up":
+                                if not (youy[1] < 2):
+                                    sense.set_pixel(youx, youy[0], 0, 0, 0)
+                                    sense.set_pixel(youx, youy[1], 0, 0, 0)
+                                    sense.set_pixel(0, 0, 0, 127, 127)
+                                    sense.set_pixel(0, 7, 0, 127, 127)
+                                    youy[0] = youy[0] - 1
+                                    youy[1] = youy[1] - 1
+                                    afficher()
+                            elif event.action == "pressed" and event.direction == "down":
+                                if not (youy[1] > 6):
+                                    sense.set_pixel(youx, youy[0], 0, 0, 0)
+                                    sense.set_pixel(youx, youy[1], 0, 0, 0)
+                                    sense.set_pixel(0, 0, 0, 127, 127)
+                                    sense.set_pixel(0, 7, 0, 127, 127)
+                                    youy[0] = youy[0] + 1
+                                    youy[1] = youy[1] + 1
+                                    afficher()
                 while (a == 0):
-                    for event in events:
-                        if event.action == "pressed" and event.direction == "up":
-                            if not (youy[1] < 2):
-                                sense.set_pixel(youx, youy[0], 0, 0, 0)
-                                sense.set_pixel(youx, youy[1], 0, 0, 0)
-                                sense.set_pixel(0, 0, 0, 127, 127)
-                                sense.set_pixel(0, 7, 0, 127, 127)
-                                youy[0] = youy[0] - 1
-                                youy[1] = youy[1] - 1
-                                afficher()
-                        elif event.action == "pressed" and event.direction == "down":
-                            if not (youy[1] > 6):
-                                sense.set_pixel(youx, youy[0], 0, 0, 0)
-                                sense.set_pixel(youx, youy[1], 0, 0, 0)
-                                sense.set_pixel(0, 0, 0, 127, 127)
-                                sense.set_pixel(0, 7, 0, 127, 127)
-                                youy[0] = youy[0] + 1
-                                youy[1] = youy[1] + 1
-                                afficher()
+                    move()
                     sense.set_pixel(youx, youy[0], 0, 0, 0)
                     sense.set_pixel(youx, youy[1], 0, 0, 0)
                     sense.set_pixel(ballx, bally, 0, 0, 0)
