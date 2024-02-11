@@ -24,7 +24,7 @@ try:
             sense.set_pixel(0, 3, 90, 127, 0)
 
             sense.set_pixel(0, 4, 90, 127, 0)
-            os.system("apt-get update")
+            os.system("apt-get update -y")
             sense.set_pixel(1, 3, 90, 127, 0)
 
             sense.set_pixel(1, 4, 90, 127, 0)
@@ -32,7 +32,7 @@ try:
             sense.set_pixel(2, 3, 90, 127, 0)
 
             sense.set_pixel(2, 4, 90, 127, 0)
-            os.system("apt-get upgrade")
+            os.system("apt-get upgrade -y")
 
             sense.set_pixel(3, 3, 90, 127, 0)
 
