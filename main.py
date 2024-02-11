@@ -149,7 +149,7 @@ try:
                             my = 1
                         if temps < 0.3 or bally == 6 and not bally == (ennemiy[1] or ennemiy[0]):
                             my = 1
-                            message = "Vous avez gagné !"
+                            message = "Vous avez gagne !"
                             sense.show_message(message, text_colour=(70, 127, 70), scroll_speed=0.1)
                             a = 1
                             break
