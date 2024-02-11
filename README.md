@@ -12,7 +12,7 @@ mkdir ./installation/
 Ensuit installez python3 et git:
 
 ```
-sudo apt install python3 python3-sense-hat python3-psutil git -y
+sudo apt install python3 python3-sense-hat git -y
 ```
 
 Clonez le repo dans /root/installation/ en tapant les commandes : 
