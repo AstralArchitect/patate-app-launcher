@@ -31,7 +31,7 @@ sudo python3 installation/Installation.py
 
 ## Executer le script automatiquement au démarrage :
 
-Si vous avez installé le programme via installation.py, il ne vous reste plus qu'a redémarrer votre ordinateur et le script s'éxécutera automatiquement!
+Si vous avez installé le programme via installation.py, le script s'éxécutera automatiquement au démmarrage !
 
 # Documentation :
 
