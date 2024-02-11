@@ -38,6 +38,7 @@ try:
                 sense.show_message(message, text_colour=(0, 127, 0), scroll_speed=0.1)
             #jouer à pong
             elif event.action == "pressed" and event.direction == "up":
+                # Initialisez toutes les variables globales
                 message = "pong..."
                 sense.show_message(message, text_colour=(127, 127, 0), scroll_speed=0.1)
                 sense.clear()
@@ -50,29 +51,9 @@ try:
                 mx = 0
                 my = 0
                 temps = 1.5
-                sleep(0.5)
                 a = 0
-                sense.set_pixel(youx, youy[0], 127, 127, 0)
-                sense.set_pixel(youx, youy[1], 127, 127, 0)
-                sense.set_pixel(ballx, bally, 127, 127, 0)
-                sense.set_pixel(ennemix, ennemiy[0], 127, 127, 0)
-                sense.set_pixel(ennemix, ennemiy[1], 127, 127, 0)
-                sense.set_pixel(0, 0, 0, 127, 127)
-                sense.set_pixel(1, 0, 0, 127, 127)
-                sense.set_pixel(2, 0, 0, 127, 127)
-                sense.set_pixel(3, 0, 0, 127, 127)
-                sense.set_pixel(4, 0, 0, 127, 127)
-                sense.set_pixel(5, 0, 0, 127, 127)
-                sense.set_pixel(6, 0, 0, 127, 127)
-                sense.set_pixel(7, 0, 0, 127, 127)
-                sense.set_pixel(0, 7, 0, 127, 127)
-                sense.set_pixel(1, 7, 0, 127, 127)
-                sense.set_pixel(2, 7, 0, 127, 127)
-                sense.set_pixel(3, 7, 0, 127, 127)
-                sense.set_pixel(4, 7, 0, 127, 127)
-                sense.set_pixel(5, 7, 0, 127, 127)
-                sense.set_pixel(6, 7, 0, 127, 127)
-                sense.set_pixel(7, 7, 0, 127, 127)
+
+                # Définissez la fonction afficher()
                 def afficher():
                     sense.set_pixel(youx, youy[0], 127, 127, 0)
                     sense.set_pixel(youx, youy[1], 127, 127, 0)
@@ -80,7 +61,10 @@ try:
                     sense.set_pixel(ennemix, ennemiy[0], 127, 127, 0)
                     sense.set_pixel(ennemix, ennemiy[1], 127, 127, 0)
                     sense.set_pixel(7, 7, 0, 127, 127)
+
                 sleep(0.5)
+
+                # Définissez la fonction move()
                 def move():
                     global a
                     while(a == 0):
@@ -104,10 +88,13 @@ try:
                                     youy[0] = youy[0] + 1
                                     youy[1] = youy[1] + 1
                                     afficher()
+
                 move_thread = threading.Thread(target=move)
                 move_thread.start()
+
+                # Définissez la fonction ball()
                 def ball():
-                    global a, temps, my, ennemix, ennemiy, youx, youy, ballx, bally
+                    global a, temps, my, ennemix, ennemiy, youx, youy, ballx, bally, mx
                     while (a == 0):
                         sense.set_pixel(youx, youy[0], 0, 0, 0)
                         sense.set_pixel(youx, youy[1], 0, 0, 0)
@@ -153,6 +140,7 @@ try:
                         elif bally == 1:
                             my = 0
                             temps = temps - 0.01
+
                 ball_thread = threading.Thread(target=ball)
                 ball_thread.start()
             #éteindre l'ordinateur
