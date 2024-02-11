@@ -101,8 +101,8 @@ try:
                                     youy[0] = youy[0] + 1
                                     youy[1] = youy[1] + 1
                                     afficher()
+                move()
                 while (a == 0):
-                    move()
                     sense.set_pixel(youx, youy[0], 0, 0, 0)
                     sense.set_pixel(youx, youy[1], 0, 0, 0)
                     sense.set_pixel(ballx, bally, 0, 0, 0)
