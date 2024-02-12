@@ -46,9 +46,9 @@ Pour voire la température la pression et l'humidité poussez le joystick du sen
 
 Attention: la température peut être fausse car le capteur se trouve près de votre ordinateur qui chauffe
 
-## 3. Pong(Béta) : 
+## 3. non attribué : 
 
-Pour pouvoir jouer au jeu de pong(béta), poussez le joystick vers le haut.
+Par défaut pousser le joystick vers le haut écrira "Vous n'avez rien installe.". Pour installer des programmes, [lisez cette page](https://github.com/AstralArchitect/pong-PatateOS)
 
 ## 4. Mise à jour :
 
