@@ -52,7 +52,7 @@ Si vous avez installé le programme via installation.py, le script s'éxécutera
 ## Commandes de base :
 
 ## 1. Usage du CPU et de la mémoire :
-Pour voir lusage du cpu et de la mémoire poussez le joystick de votre sense hat vers la gauche
+Pour voir l'usage du cpu et de la mémoire poussez le joystick de votre sense hat vers la gauche
 
 ## 2. Température, Pression et Humidité :
 
@@ -60,7 +60,7 @@ Pour voire la température la pression et l'humidité poussez le joystick du sen
 
 Attention: la température peut être fausse car le capteur se trouve près de votre ordinateur qui chauffe
 
-## 3. non attribué : 
+## 3. Non attribué : 
 
 Par défaut pousser le joystick vers le haut écrira "Vous n'avez rien installe.". Pour installer des programmes, [lisez cette page](https://github.com/AstralArchitect/pong-patateOS/blob/main/README.md#cr%C3%A9er-dautres-programmes-sur-patateos-)
 
