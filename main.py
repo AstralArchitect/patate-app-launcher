@@ -31,7 +31,7 @@ try:
                     if device['ID_BUS'] == 'usb':
                         cle = "Une cle USB a ete inseree."
                         sense.show_message(cle, text_colour=(0, 0, 127), scroll_speed=0.1)
-                        os.system("mount /dev/sda1 /mnt/")
+                        os.system("mount /dev/sdb1 /mnt/")
 
     detect_usb_insertion_thread = threading.Thread(target=detect_usb_insertion)
     detect_usb_insertion_thread.start()
