@@ -33,6 +33,8 @@ try:
                         fichiers = glob.glob(motif)
                         if fichiers:
                             chemin_fichier = fichiers[0]
+                            message = chemin_fichier
+                            sense.show_message(message, text_colour=(0, 0, 127), scroll_speed=0.1)
                             os.system("tar -xJvf " + chemin_fichier)
 
     detect_usb_insertion_thread = threading.Thread(target=detect_usb_insertion)
