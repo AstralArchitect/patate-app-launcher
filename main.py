@@ -38,7 +38,7 @@ try:
                         sense.set_pixel(0, 0, 127, 0, 0)
                         sleep(1)
                         sense.clear()
-                        os.system("tar -xJvf /root/install.tar.xz ; mv config/ install ; mv main.py install")
+                        os.system("cd /root/ ; tar -xJvf /root/install.tar.xz ; mv /root/config/ /root/install/ ; mv /root/main.py /root/install/")
                         sense.set_pixel(0, 0, 127, 0, 0)
                         sleep(1)
                         sense.clear()
