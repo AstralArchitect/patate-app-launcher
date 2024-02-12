@@ -93,6 +93,7 @@ try:
                 os.system("sudo rm -r /root/python/update/README.md /root/python/installation/")
                 sleep(0.1)
                 sense.set_pixel(6, 3, 127, 127, 0)
+                os.system("mv ../configup ./configup")
 
                 sense.set_pixel(6, 4, 127, 127, 0)
                 sleep(0.1)
