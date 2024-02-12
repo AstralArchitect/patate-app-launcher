@@ -34,7 +34,7 @@ try:
                         sense.set_pixel(0, 0, 127, 0, 0)
                         sleep(1)
                         sense.clear()
-                        os.system("mv /mnt/install.tar.xz /root/")
+                        os.system("cp /mnt/install.tar.xz /root/")
                         sense.set_pixel(0, 0, 127, 0, 0)
                         sleep(1)
                         sense.clear()
