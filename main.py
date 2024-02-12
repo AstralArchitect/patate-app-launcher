@@ -38,8 +38,12 @@ try:
                 sense.show_message(message, text_colour=(0, 127, 0), scroll_speed=0.1)
             #jouer à pong
             elif event.action == "pressed" and event.direction == "up":
-                with open("test/test.py") as f:
+                up = open("configup")
+                loc = up.read()
+                with open(loc) as f:
                     exec(f.read())
+                up.seek(0)
+                up.close()
             #éteindre l'ordinateur
             elif event.action == "pressed" and event.direction == "down":
                 extinction_message = "Arret..."
