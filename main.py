@@ -63,6 +63,7 @@ try:
                 sense.set_pixel(0, 3, 127, 127, 0)
 
                 sense.set_pixel(0, 4, 127, 127, 0)
+                os.system("mv configup ../configup")
                 os.system("git pull")
                 sleep(0.1)
                 
