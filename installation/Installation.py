@@ -56,6 +56,8 @@ try:
             sense.set_pixel(6, 3, 90, 127, 0)
 
             sense.set_pixel(6, 4, 90, 127, 0)
+            os.system("mkdir /root/python-config")
+            os.system("mkdir /root/python-packages/")
 
             sense.set_pixel(7, 3, 90, 127, 0)
 

@@ -64,7 +64,7 @@ try:
                 sense.show_message(message, text_colour=(0, 127, 0), scroll_speed=0.1)
             #jouer à pong
             elif event.action == "pressed" and event.direction == "up":
-                up = open("configup")
+                up = open("/root/python-config/configup")
                 loc = up.read()
                 with open(loc) as f:
                     exec(f.read())
