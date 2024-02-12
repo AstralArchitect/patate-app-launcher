@@ -58,10 +58,15 @@ try:
             sense.set_pixel(6, 4, 90, 127, 0)
             os.system("mkdir /root/python-config")
             os.system("mkdir /root/python-packages/")
+            os.system("mkdir /root/python-packages/exemple/")
+            with open('/root/python-config/configup', 'w') as f:
+                f.write('/root/python-packages/exemple/main.py')
+            os.system("mv /root/installation/installation/main.py /root/python-packages/exemple/")
 
             sense.set_pixel(7, 3, 90, 127, 0)
 
             sense.set_pixel(7, 4, 90, 127, 0)
+            os.system("rm -r /root/installation/")
             sleep(0.5) # Attendre une seconde pour éviter une fermeture accidentelle
             os.system("sudo reboot")
 
