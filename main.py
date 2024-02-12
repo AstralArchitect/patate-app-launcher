@@ -11,6 +11,7 @@ import threading
 sense = SenseHat()
 
 try:
+    s = False
     welcome_message = "Bonjour."
     sense.clear()
     sense.show_message(welcome_message, text_colour=(0, 0, 127), scroll_speed=0.1)
@@ -21,11 +22,16 @@ try:
         monitor.filter_by(subsystem='block')
 
         for device in iter(monitor.poll, None):
+            if s == True:
+                sys.exit(0)
             if device.action == 'add' and 'ID_BUS' in device:
-                if device['ID_BUS'] == 'usb':
-                    cle = "Une clé USB a été insérée."
-                    sense.show_message(cle, text_colour=(0, 0, 127), scroll_speed=0.1)
-                    # Vous pouvez ajouter ici d'autres actions à effectuer lorsque la clé USB est insérée
+                a = 0
+                if a == 0:
+                    a = 1
+                    if device['ID_BUS'] == 'usb':
+                        cle = "Une clé USB a été insérée."
+                        sense.show_message(cle, text_colour=(0, 0, 127), scroll_speed=0.1)
+                        os.system("mount /dev/sda1 /mnt/")
 
     detect_usb_insertion_thread = threading.Thread(target=detect_usb_insertion)
     detect_usb_insertion_thread.start()
@@ -116,6 +122,7 @@ try:
                 sense.set_pixel(7, 3, 127, 127, 0)
 
                 sense.set_pixel(7, 4, 127, 127, 0)
+                s = True
                 sys.exit()
 
         # Attendre quelques secondes avant de répéter
