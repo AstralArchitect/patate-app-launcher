@@ -4,6 +4,7 @@ import os
 import psutil
 import sys
 from random import randint
+import pyudev
 import threading
 
 # Initialiser l'objet SenseHat
@@ -13,6 +14,21 @@ try:
     welcome_message = "Bonjour."
     sense.clear()
     sense.show_message(welcome_message, text_colour=(0, 0, 127), scroll_speed=0.1)
+
+    def detect_usb_insertion():
+        context = pyudev.Context()
+        monitor = pyudev.Monitor.from_netlink(context)
+        monitor.filter_by(subsystem='block')
+
+        for device in iter(monitor.poll, None):
+            if device.action == 'add' and 'ID_BUS' in device:
+                if device['ID_BUS'] == 'usb':
+                    print("Une clé USB a été insérée.")
+                    print("Device:", device)
+                    # Vous pouvez ajouter ici d'autres actions à effectuer lorsque la clé USB est insérée
+
+    detect_usb_insertion_thread = threading.Thread(target=detect_usb_insertion)
+    detect_usb_insertion_thread.start()
 
     while True:
         # Obtenir les événements du joystick
