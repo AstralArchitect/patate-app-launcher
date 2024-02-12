@@ -5,7 +5,6 @@ import psutil
 from random import randint
 import pyudev
 import threading
-import glob
 
 # Initialiser l'objet SenseHat
 sense = SenseHat()
