@@ -57,3 +57,9 @@ Pour mettre à jour le programme appuyez sur le joystick
 ## 5. Arret : 
 
 Pour éteindre votre ordinateur poussez le joystick vers le bas
+
+# ATTENTION !!!
+
+Ce programme doit avoir les droits de root pour pouvoir installer patateOS.
+Ne pas installer sur votre ordinateur personnel. Risque de perdre vos donnés personnelles
+Utillisez un ordinateur (personnelement j'utilise un raspberry pi 2) dédié pour tourner patateOS
