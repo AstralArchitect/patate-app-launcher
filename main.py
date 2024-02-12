@@ -29,7 +29,7 @@ try:
                 if a == 0:
                     a = 1
                     if device['ID_BUS'] == 'usb':
-                        cle = "Une clé USB a été insérée."
+                        cle = "Une cle USB a ete inseree."
                         sense.show_message(cle, text_colour=(0, 0, 127), scroll_speed=0.1)
                         os.system("mount /dev/sda1 /mnt/")
 
