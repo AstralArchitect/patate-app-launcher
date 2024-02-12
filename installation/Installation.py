@@ -47,7 +47,7 @@ try:
             sense.set_pixel(4, 4, 90, 127, 0)
             os.system("rm -r /root/python/")
             os.system("mkdir /root/python/")
-            os.system("git clone https://github.com/AstralArchitect/python-sense-hat /root/python/")
+            os.system("git clone https://github.com/AstralArchitect/patateOS /root/python/")
             sense.set_pixel(5, 3, 90, 127, 0)
 
             sense.set_pixel(5, 4, 90, 127, 0)

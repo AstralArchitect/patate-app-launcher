@@ -17,7 +17,7 @@ sudo apt install python3 python3-sense-hat git -y
 
 Clonez le repo dans /root/installation/ en tapant les commandes : 
 ```
-sudo git clone https://github.com/AstralArchitect/python-sense-hat.git /root/installation/
+sudo git clone https://github.com/AstralArchitect/patateOS.git /root/installation/
 ```
 
 Puis déplacez vous dans le dossier:
