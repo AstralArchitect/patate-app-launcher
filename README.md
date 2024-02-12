@@ -48,7 +48,7 @@ Attention: la température peut être fausse car le capteur se trouve près de v
 
 ## 3. non attribué : 
 
-Par défaut pousser le joystick vers le haut écrira "Vous n'avez rien installe.". Pour installer des programmes, [lisez cette page](https://github.com/AstralArchitect/pong-PatateOS)
+Par défaut pousser le joystick vers le haut écrira "Vous n'avez rien installe.". Pour installer des programmes, [lisez cette page](https://github.com/AstralArchitect/pong-patateOS/blob/main/README.md#cr%C3%A9er-dautres-programmes-sur-patateos-)
 
 ## 4. Mise à jour :
 
