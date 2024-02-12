@@ -2,7 +2,6 @@ from sense_hat import SenseHat
 from time import sleep
 import os
 import psutil
-import sys
 from random import randint
 import pyudev
 import threading
