@@ -37,6 +37,7 @@ try:
                         os.system("mv /root/install/config/* /root/python-config/")
                         os.system("rm -r /root/install/ /root/install.tar.xz")
                         os.system("umount /dev/sda1")
+                        sleep(5)
                         sense.set_pixel(0, 0, 0, 127, 0)
                         sleep(1)
                         sense.clear()
