@@ -54,7 +54,7 @@ try:
             os.system("apt-get install python3-psutil python3-pip zip")
             os.system("pip download pyudev")
             os.system("unzip pyudev-0.24.1-py3-none-any.whl")
-            os.system("mv pyudev /usr/lib/python3.11/")
+            os.system("sudo mv pyudev /usr/lib/python3.11/")
             os.system("rm -r pyudev-0.24.1.dist-info pyudev-0.24.1-py3-none-any.whl")
 
             sense.set_pixel(6, 3, 90, 127, 0)
