@@ -34,6 +34,10 @@ try:
                         os.system("tar -xJvf /root/install.tar.xz")
                         os.system("mv main.py /root/python-packages/")
                         os.system("mv /root/config/* /root/python-config/")
+                        os.system("umount /dev/sda1")
+                        sense.set_pixel(0, 0, 0, 127, 0)
+                        sleep(1)
+                        sense.clear()
 
     detect_usb_insertion_thread = threading.Thread(target=detect_usb_insertion)
     detect_usb_insertion_thread.start()
