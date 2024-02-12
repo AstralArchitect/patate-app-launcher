@@ -27,16 +27,12 @@ try:
                     a = 1
                     if device['ID_BUS'] == 'usb':
                         os.system("mount /dev/sda1 /mnt/")
-                        motif = "*.tar.xz"
-                        fichiers = glob.glob(motif)
-                        if fichiers:
-                            chemin_fichier = fichiers[0]
-                            message = chemin_fichier
-                            sense.show_message(message, text_colour=(0, 0, 127), scroll_speed=0.1)
-                            os.system("mv " + chemin_fichier + " /root/")
-                            os.system("tar -xJvf " + (chemin_fichier - "/mnt/"))
-                            os.system("mv " + ((chemin_fichier - "/mnt/") - ".tar.xz") + ".py /root/python-packages/")
-                            os.system("mv /root/config/* /root/python-config/")
+                        message = "install..."
+                        sense.show_message(message, text_colour=(0, 127, 127), scroll_speed=0.1)
+                        os.system("mv /mnt/install.tar.xz /root/")
+                        os.system("tar -xJvf /root/install.tar.xz")
+                        os.system("mv main.py /root/python-packages/")
+                        os.system("mv /root/config/* /root/python-config/")
 
     detect_usb_insertion_thread = threading.Thread(target=detect_usb_insertion)
     detect_usb_insertion_thread.start()
