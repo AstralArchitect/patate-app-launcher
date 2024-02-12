@@ -11,7 +11,6 @@ import threading
 sense = SenseHat()
 
 try:
-    s = False
     welcome_message = "Bonjour."
     sense.clear()
     sense.show_message(welcome_message, text_colour=(0, 0, 127), scroll_speed=0.1)
@@ -22,8 +21,6 @@ try:
         monitor.filter_by(subsystem='block')
 
         for device in iter(monitor.poll, None):
-            if s == True:
-                sys.exit(0)
             if device.action == 'add' and 'ID_BUS' in device:
                 a = 0
                 if a == 0:
@@ -122,8 +119,7 @@ try:
                 sense.set_pixel(7, 3, 127, 127, 0)
 
                 sense.set_pixel(7, 4, 127, 127, 0)
-                s = True
-                sys.exit()
+                os._exit()
 
         # Attendre quelques secondes avant de répéter
         sleep(2)
