@@ -1,6 +1,3 @@
-import threading
-from random import randint
-from time import sleep
 from sense_hat import SenseHat
 
 sense = SenseHat()

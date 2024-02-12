@@ -63,8 +63,12 @@ try:
             os.system("mkdir /root/python-config")
             os.system("mkdir /root/python-packages/")
             os.system("mkdir /root/python-packages/exemple/")
+            os.system("mkdir /root/python-packages/cpu/")
             with open('/root/python-config/configup', 'w') as f:
                 f.write('/root/python-packages/exemple/main.py')
+            with open('/root/python-config/configleft', 'w') as f:
+                f.write('/root/python-packages/cpu/CPU.py')
+            os.system("mv /root/installation/installation/CPU.py /root/python-packages/cpu/")
             os.system("mv /root/installation/installation/main.py /root/python-packages/exemple/")
 
             sense.set_pixel(7, 3, 90, 127, 0)
