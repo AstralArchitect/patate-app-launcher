@@ -1,8 +1,8 @@
 # ATTENTION !!!
 
-Ce programme doit avoir les droits de root pour pouvoir installer patateOS.
-Ne pas installer sur votre ordinateur personnel. Risque de perdre vos donnés personnelles
-Utillisez un ordinateur (personnelement j'utilise un raspberry pi 2) dédié pour tourner patateOS
+Ce programme doit avoir les droits de root pour pouvoir installer patateOS.\
+Ne pas installer sur votre ordinateur personnel. Risque de perdre vos donnés personnelles.\
+Utillisez un ordinateur (personnelement j'utilise un raspberry pi 2) dédié pour tourner patateOS.\
 
 # Introdduction à PatateOS : 
 Ceci est un "os", pour raspberry pi 2, il utilise la [raspberry pi sense hat](https://www.kubii.com/fr/modules-capteurs/1081-raspberry-pi-sense-hat-kubii-640522710799.html) et affiche des informations dessus tels que la température, l'usage du CPU et de la méméoire, la pression et l'humidité. On peut aussi y installer d'autres programmes tel que [pong](https://github.com/AstralArchitect/pong-patateOS).
