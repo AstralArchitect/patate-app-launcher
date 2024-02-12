@@ -23,8 +23,8 @@ try:
         for device in iter(monitor.poll, None):
             if device.action == 'add' and 'ID_BUS' in device:
                 if device['ID_BUS'] == 'usb':
-                    print("Une clé USB a été insérée.")
-                    print("Device:", device)
+                    cle = "Une clé USB a été insérée."
+                    sense.show_message(cle, text_colour=(0, 0, 127), scroll_speed=0.1)
                     # Vous pouvez ajouter ici d'autres actions à effectuer lorsque la clé USB est insérée
 
     detect_usb_insertion_thread = threading.Thread(target=detect_usb_insertion)
