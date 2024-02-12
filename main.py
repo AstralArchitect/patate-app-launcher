@@ -11,18 +11,19 @@ import glob
 sense = SenseHat()
 
 try:
+    a = 0
     welcome_message = "Bonjour."
     sense.clear()
     sense.show_message(welcome_message, text_colour=(0, 0, 127), scroll_speed=0.1)
 
     def detect_usb_insertion():
+        global a
         context = pyudev.Context()
         monitor = pyudev.Monitor.from_netlink(context)
         monitor.filter_by(subsystem='block')
 
         for device in iter(monitor.poll, None):
             if device.action == 'add' and 'ID_BUS' in device:
-                a = 0
                 if a == 0:
                     a = 1
                     if device['ID_BUS'] == 'usb':
