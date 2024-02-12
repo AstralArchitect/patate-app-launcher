@@ -118,7 +118,7 @@ try:
                 sense.set_pixel(7, 3, 127, 127, 0)
 
                 sense.set_pixel(7, 4, 127, 127, 0)
-                os._exit()
+                os._exit(0)
 
         # Attendre quelques secondes avant de répéter
         sleep(2)
