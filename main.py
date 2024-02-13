@@ -55,6 +55,7 @@ try:
     while True:
         # Obtenir les événements du joystick
         events = sense.stick.get_events()
+        os.listdir("/root/python-config/")
         programmes = os.listdir("/root/python-config/")
         sense.show_message(programmes, text_colour=(0, 0, 127), scroll_speed=0.1)
         # Boucle sur les événements du joystick
