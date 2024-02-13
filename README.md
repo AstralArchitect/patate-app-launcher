@@ -49,6 +49,7 @@ sudo python3 installation/Installation.py
 Si vous avez installé le programme via installation.py, le script s'éxécutera automatiquement au démmarrage !
 
 # Documentation :
+## Attention: Grosse mise à jour en cours, ces information peuvent être fausse. Elle seront mise à jour quand la mise à jour n'aura plus de beuges. Merci de votre compréhension.
 
 ## Commandes de base :
 
