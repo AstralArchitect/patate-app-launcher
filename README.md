@@ -1,5 +1,20 @@
+# ATTENTION !!!
+
+Ne fonctionne que sur raspberry pi.\
+Ce programme doit avoir les droits de root pour pouvoir installer patateOS.\
+Ne pas installer sur votre ordinateur personnel. Risque de perdre vos donnés personnelles.\
+Utillisez un ordinateur (personnelement j'utilise un raspberry pi 2) dédié pour tourner patateOS.
+
+# Introdduction à PatateOS : 
+Ceci est un "os", pour raspberry pi 2, il utilise la [raspberry pi sense hat](https://www.kubii.com/fr/modules-capteurs/1081-raspberry-pi-sense-hat-kubii-640522710799.html) et affiche des informations dessus tels que la température, l'usage du CPU et de la méméoire, la pression et l'humidité. On peut aussi y installer d'autres programmes tel que [pong](https://github.com/AstralArchitect/pong-patateOS).
+
 # installation et configuration :
 ## Installation :
+### note :
+Veuillez d'abord configurer votre raspberry pi de façon à ce qu'il n'ai pas d'interface graphique
+###
+
+
 déplacez vous dans /root/
 
 ```
@@ -38,7 +53,7 @@ Si vous avez installé le programme via installation.py, le script s'éxécutera
 ## Commandes de base :
 
 ## 1. Usage du CPU et de la mémoire :
-Pour voir lusage du cpu et de la mémoire poussez le joystick de votre sense hat vers la gauche
+Pour voir l'usage du cpu et de la mémoire poussez le joystick de votre sense hat vers la gauche
 
 ## 2. Température, Pression et Humidité :
 
@@ -46,9 +61,9 @@ Pour voire la température la pression et l'humidité poussez le joystick du sen
 
 Attention: la température peut être fausse car le capteur se trouve près de votre ordinateur qui chauffe
 
-## 3. non attribué : 
+## 3. Non attribué : 
 
-Par défaut pousser le joystick vers le haut écrira "Vous n'avez rien installe.". Pour installer des programmes, [lisez cette page](https://github.com/AstralArchitect/pong-PatateOS)
+Par défaut pousser le joystick vers le haut écrira "Vous n'avez rien installe.". Pour installer des programmes, [lisez cette page](https://github.com/AstralArchitect/pong-patateOS/blob/main/README.md#cr%C3%A9er-dautres-programmes-sur-patateos-)
 
 ## 4. Mise à jour :
 
@@ -57,3 +72,4 @@ Pour mettre à jour le programme appuyez sur le joystick
 ## 5. Arret : 
 
 Pour éteindre votre ordinateur poussez le joystick vers le bas
+

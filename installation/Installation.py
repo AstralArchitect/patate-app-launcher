@@ -39,8 +39,8 @@ try:
             os.system("rm /etc/rc.local")
             os.system("mv /root/installation/installation/rc.local /etc/rc.local")
             os.system("mv /root/installation/installation/start.sh /root/")
-            os.system("chmod 555 /root/start.sh")
-            os.system("chmod 555 /etc/rc.local")
+            os.system("chmod 500 /root/start.sh")
+            os.system("chmod 500 /etc/rc.local")
 
             sense.set_pixel(4, 3, 90, 127, 0)
 
