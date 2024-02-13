@@ -51,27 +51,17 @@ try:
             sense.set_pixel(5, 3, 90, 127, 0)
 
             sense.set_pixel(5, 4, 90, 127, 0)
-            os.system("apt-get install python3-psutil python3-pip zip")
-            os.system("pip download pyudev")
-            os.system("unzip pyudev-0.24.1-py3-none-any.whl")
-            os.system("sudo mv pyudev /usr/lib/python3.11/")
-            os.system("rm -r pyudev-0.24.1.dist-info pyudev-0.24.1-py3-none-any.whl")
+            os.system("apt-get install python3-psutil python3-pip zip ; pip download pyudev ; unzip pyudev-0.24.1-py3-none-any.whl ; sudo mv pyudev /usr/lib/python3.11/ ; rm -r pyudev-0.24.1.dist-info pyudev-0.24.1-py3-none-any.whl")
 
             sense.set_pixel(6, 3, 90, 127, 0)
 
             sense.set_pixel(6, 4, 90, 127, 0)
-            os.system("rm -r /root/python-config/")
-            os.system("rm -r /root/python-packages/")
-            os.system("mkdir /root/python-config")
-            os.system("mkdir /root/python-packages/")
-            os.system("mkdir /root/python-packages/exemple/")
-            os.system("mkdir /root/python-packages/cpu/")
+            os.system("rm -r /root/python-config/ ; rm -r /root/python-packages/ ; mkdir /root/python-config ; mkdir /root/python-packages/ ; mkdir /root/python-packages/exemple/ ; mkdir /root/python-packages/cpu/")
             with open('/root/python-config/configup', 'w') as f:
                 f.write('/root/python-packages/exemple/main.py')
             with open('/root/python-config/configleft', 'w') as f:
                 f.write('/root/python-packages/cpu/CPU.py')
-            os.system("mv /root/installation/installation/CPU.py /root/python-packages/cpu/")
-            os.system("mv /root/installation/installation/main.py /root/python-packages/exemple/")
+            os.system("mv /root/installation/installation/CPU.py /root/python-packages/cpu/ ; mv /root/installation/installation/main.py /root/python-packages/exemple/")
 
             sense.set_pixel(7, 3, 90, 127, 0)
 
