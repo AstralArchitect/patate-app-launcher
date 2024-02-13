@@ -1,5 +1,6 @@
 # ATTENTION !!!
 
+Ne fonctionne que sur raspberry pi.\
 Ce programme doit avoir les droits de root pour pouvoir installer patateOS.\
 Ne pas installer sur votre ordinateur personnel. Risque de perdre vos donnés personnelles.\
 Utillisez un ordinateur (personnelement j'utilise un raspberry pi 2) dédié pour tourner patateOS.
