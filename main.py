@@ -71,13 +71,9 @@ try:
 
             #donner l'utilisation du CPU et de la mémoire
             elif event.action == "pressed" and event.direction == "left":
-                left = open("/root/python-config/configleft")
-                loc = left.read()
-                with open(loc) as f:
-                    exec(f.read())
-                left.seek(0)
-                left.close()
-            #jouer à pong
+                message = "uninstall..."
+                sense.show_message(message, text_colour=(127, 0, 0), scroll_speed=0.1)
+                os.system("rm -r /root/python-packages/" + programmes[nombre] + "/ /root/python-config/" + programmes[nombre] + "/")
             elif event.action == "pressed" and event.direction == "up":
                 nombre = nombre + 1
                 sense.show_message(programmes[nombre], text_colour=(0, 0, 127), scroll_speed=0.1)
@@ -93,12 +89,32 @@ try:
                             up.seek(0)
                             up.close()
                             fin = True
-            #éteindre l'ordinateur
+                        if event.action == "pressed" and event.direction == "up":
+                            fin = True
             elif event.action == "pressed" and event.direction == "down":
-                extinction_message = "Arret..."
-                sense.show_message(extinction_message, text_colour=(127, 0, 0), scroll_speed=0.1)
-                sleep(1)  # Attendre une seconde pour éviter une fermeture accidentelle
-                os.system("sudo shutdown now")
+                if nombre == 0:
+                    extinction_message = "Arret..."
+                    sense.show_message(extinction_message, text_colour=(127, 0, 0), scroll_speed=0.1)
+                    sleep(1)  # Attendre une seconde pour éviter une fermeture accidentelle
+                    os.system("sudo shutdown now")
+                
+                else:
+                    nombre = nombre - 1
+                    sense.show_message(programmes[nombre], text_colour=(0, 0, 127), scroll_speed=0.1)
+                    fin = False
+                    while fin == False:
+                        events = sense.stick.get_events()
+                        for event in events:
+                            if event.action == "pressed" and event.direction == "middle":
+                                up = open("/root/python-config/" + programmes[nombre])
+                                loc = up.read()
+                                with open(loc) as f:
+                                    exec(f.read())
+                                up.seek(0)
+                                up.close()
+                                fin = True
+                            if event.action == "pressed" and event.direction == "down":
+                                fin = True
             # Mettre à jour le programme
             elif event.action == "pressed" and event.direction == "middle":
                 sense.set_pixel(0, 3, 127, 127, 0)
