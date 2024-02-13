@@ -48,6 +48,7 @@ try:
                         sense.set_pixel(7, 4, 0, 127, 0)
                         sleep(1)
                         sense.clear()
+                        os._exit(0)
 
     detect_usb_insertion_thread = threading.Thread(target=detect_usb_insertion)
     detect_usb_insertion_thread.start()
@@ -55,9 +56,8 @@ try:
     while True:
         # Obtenir les événements du joystick
         events = sense.stick.get_events()
-        os.listdir()
         programmes = os.listdir("/root/python-config/")
-        sense.show_message(programmes, text_colour=(0, 0, 127), scroll_speed=0.1)
+        nombre = 0
         # Boucle sur les événements du joystick
         for event in events:
             #donner la pression l'humidité et la température
@@ -79,12 +79,16 @@ try:
                 left.close()
             #jouer à pong
             elif event.action == "pressed" and event.direction == "up":
-                up = open("/root/python-config/configup")
-                loc = up.read()
-                with open(loc) as f:
-                    exec(f.read())
-                up.seek(0)
-                up.close()
+                nombre = nombre + 1
+                sense.show_message(programmes[nombre], text_colour=(0, 0, 127), scroll_speed=0.1)
+                for event in events:
+                    if event.action == "pressed" and event.direction == "middle":
+                        up = open("/root/python-config/" + programmes[nombre])
+                        loc = up.read()
+                        with open(loc) as f:
+                            exec(f.read())
+                        up.seek(0)
+                        up.close()
             #éteindre l'ordinateur
             elif event.action == "pressed" and event.direction == "down":
                 extinction_message = "Arret..."
