@@ -89,7 +89,9 @@ try:
                             up.seek(0)
                             up.close()
                             fin = True
-                        if event.action == "pressed" and event.direction == "up":
+                        elif event.action == "pressed" and event.direction == "up":
+                            fin = True
+                        elif event.action == "pressed" and event.direction == "down":
                             fin = True
             elif event.action == "pressed" and event.direction == "down":
                 if nombre == 0:
@@ -113,7 +115,9 @@ try:
                                 up.seek(0)
                                 up.close()
                                 fin = True
-                            if event.action == "pressed" and event.direction == "down":
+                            elif event.action == "pressed" and event.direction == "down":
+                                fin = True
+                            elif event.action == "pressed" and event.direction == "up":
                                 fin = True
             # Mettre à jour le programme
             elif event.action == "pressed" and event.direction == "middle":
