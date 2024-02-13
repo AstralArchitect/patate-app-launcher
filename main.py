@@ -81,14 +81,17 @@ try:
             elif event.action == "pressed" and event.direction == "up":
                 nombre = nombre + 1
                 sense.show_message(programmes[nombre], text_colour=(0, 0, 127), scroll_speed=0.1)
-                for event in events:
-                    if event.action == "pressed" and event.direction == "middle":
-                        up = open("/root/python-config/" + programmes[nombre])
-                        loc = up.read()
-                        with open(loc) as f:
-                            exec(f.read())
-                        up.seek(0)
-                        up.close()
+                fin = False
+                while fin == False:
+                    for event in events:
+                        if event.action == "pressed" and event.direction == "middle":
+                            up = open("/root/python-config/" + programmes[nombre])
+                            loc = up.read()
+                            with open(loc) as f:
+                                exec(f.read())
+                            up.seek(0)
+                            up.close()
+                            fin = True
             #éteindre l'ordinateur
             elif event.action == "pressed" and event.direction == "down":
                 extinction_message = "Arret..."
