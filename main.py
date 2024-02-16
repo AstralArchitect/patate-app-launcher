@@ -73,7 +73,7 @@ try:
                                 exec(f.read())
                             up.seek(0)
                             up.close()
-                    sleep(1)
+                        sleep(1)
                 if programme == len(programmes) - 1:
                     programme = 0
                     continue
