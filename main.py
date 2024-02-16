@@ -74,6 +74,12 @@ try:
                             exec(f.read())
                         up.seek(0)
                         up.close()
+                    elif event.action == "pressed" and event.direction == "left":
+                        up = open("/root/python-config/" + programmes[programme])
+                        loc = up.read()
+                        uninstall = "desintallation..."
+                        sense.show_message(uninstall, text_colour=(0, 0, 127), scroll_speed=0.1)
+                        os.system("rm -r /root/python-packages/" + programmes[programme] +  "/ " + loc)
                 if programme == len(programmes) - 1:
                     programme = 0
                     continue
