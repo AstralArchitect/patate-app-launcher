@@ -63,14 +63,19 @@ try:
             if event.action == "pressed" and event.direction == "up":
                 sense.show_message(programmes[programme], text_colour=(0, 0, 127), scroll_speed=0.1)
                 events = sense.stick.get_events()
-                for event in events:
-                    if event.action == "pressed" and event.direction == "middle":
-                        up = open("/root/python-config/" + programmes[programme])
-                        loc = up.read()
-                        with open(loc) as f:
-                            exec(f.read())
-                        up.seek(0)
-                        up.close()
+                truc = False
+                while not truc:
+                    for event in events:
+                        if event.action == "pressed" and event.direction == "middle":
+                            up = open("/root/python-config/" + programmes[programme])
+                            loc = up.read()
+                            with open(loc) as f:
+                                exec(f.read())
+                            up.seek(0)
+                            up.close()
+                            truc = True
+                        elif event.action == "pressed" and event.direction == "up":
+                            truc = True
                 if programme == len(programmes) - 1:
                     programme = 0
                     continue
