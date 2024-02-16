@@ -56,102 +56,96 @@ try:
     programmes = os.listdir("/root/python-config/")
     programme = 0
     while True:
-        repeat = open("/root/repeat.txt", "r")
-        when = repeat.read()
-        if(when == "now"):
-            repeat.close()
-            sense.set_pixel(0, 0, 0, 65, 65)
-            # Obtenir les événements du joystick
-            events = sense.stick.get_events()
-            # Boucle sur les événements du joystick
-            for event in events:
+        sense.set_pixel(0, 0, 0, 65, 65)
+        # Obtenir les événements du joystick
+        events = sense.stick.get_events()
+        # Boucle sur les événements du joystick
+        for event in events:
+            sense.clear()
+            if event.action == "pressed" and event.direction == "up":
+                sense.show_message(programmes[programme], text_colour=(0, 0, 127), scroll_speed=0.1)
+                events = sense.stick.get_events()
+                truc = False
+                sleep(1)
+                for event in events:
+                    if event.action == "pressed" and event.direction == "middle":
+                        up = open("/root/python-config/" + programmes[programme])
+                        loc = up.read()
+                        with open(loc) as f:
+                            exec(f.read())
+                        up.seek(0)
+                        up.close()
+                        break
+                if programme == len(programmes) - 1:
+                    programme = 0
+                    continue
+                programme = (programme + 1)
+            elif event.action == "pressed" and event.direction == "middle":
                 sense.clear()
-                repeat = open("/root/repeat.txt", "w")
-                repeat.write("lat")
-                repeat.close()
-                if event.action == "pressed" and event.direction == "up":
-                    sense.show_message(programmes[programme], text_colour=(0, 0, 127), scroll_speed=0.1)
-                    events = sense.stick.get_events()
-                    sleep(1)
-                    for event in events:
-                        if event.action == "pressed" and event.direction == "middle":
-                            up = open("/root/python-config/" + programmes[programme])
-                            loc = up.read()
-                            with open(loc) as f:
-                                exec(f.read())
-                            up.seek(0)
-                            up.close()
-                            break
-                    if programme == len(programmes) - 1:
-                        programme = 0
-                        continue
-                    programme = (programme + 1)
-                elif event.action == "pressed" and event.direction == "middle":
-                    sense.clear()
+                message = "Mise a jour..."
                 
-                    message = "Mise a jour..."
+                sense.show_message(message, text_colour=(127, 0, 127), scroll_speed=0.1)
                 
-                    sense.show_message(message, text_colour=(127, 0, 127), scroll_speed=0.1)
+                sense.set_pixel(0, 2, 65, 65, 65)
+                sense.set_pixel(1, 2, 65, 65, 65)
+                sense.set_pixel(2, 2, 65, 65, 65)
+                sense.set_pixel(3, 2, 65, 65, 65)
+                sense.set_pixel(4, 2, 65, 65, 65)
+                sense.set_pixel(5, 2, 65, 65, 65)
+                sense.set_pixel(6, 2, 65, 65, 65)
+                sense.set_pixel(7, 2, 65, 65, 65)
+                sense.set_pixel(0, 5, 65, 65, 65)
+                sense.set_pixel(1, 5, 65, 65, 65)
+                sense.set_pixel(2, 5, 65, 65, 65)
+                sense.set_pixel(3, 5, 65, 65, 65)
+                sense.set_pixel(4, 5, 65, 65, 65)
+                sense.set_pixel(5, 5, 65, 65, 65)
+                sense.set_pixel(6, 5, 65, 65, 65)
+                sense.set_pixel(7, 5, 65, 65, 65)
                 
-                    sense.set_pixel(0, 3, 127, 127, 0)
-                    sense.set_pixel(0, 2, 65, 65, 65)
-                    sense.set_pixel(1, 2, 65, 65, 65)
-                    sense.set_pixel(2, 2, 65, 65, 65)
-                    sense.set_pixel(3, 2, 65, 65, 65)
-                    sense.set_pixel(4, 2, 65, 65, 65)
-                    sense.set_pixel(5, 2, 65, 65, 65)
-                    sense.set_pixel(6, 2, 65, 65, 65)
-                    sense.set_pixel(7, 2, 65, 65, 65)
-                    sense.set_pixel(0, 5, 65, 65, 65)
-                    sense.set_pixel(1, 5, 65, 65, 65)
-                    sense.set_pixel(2, 5, 65, 65, 65)
-                    sense.set_pixel(3, 5, 65, 65, 65)
-                    sense.set_pixel(4, 5, 65, 65, 65)
-                    sense.set_pixel(5, 5, 65, 65, 65)
-                    sense.set_pixel(6, 5, 65, 65, 65)
-                    sense.set_pixel(7, 5, 65, 65, 65)
+                sense.set_pixel(0, 3, 127, 127, 0)
 
-                    sense.set_pixel(0, 4, 127, 127, 0)
-                    os.system("mv configup ../configup")
-                    os.system("git pull")
-                    sleep(0.1)
+                sense.set_pixel(0, 4, 127, 127, 0)
+                os.system("mv configup ../configup")
+                os.system("git pull")
+                sleep(0.1)
                 
-                    sense.set_pixel(1, 3, 127, 127, 0)
+                sense.set_pixel(1, 3, 127, 127, 0)
                 
-                    sense.set_pixel(1, 4, 127, 127, 0)
-                    sleep(0.1)
+                sense.set_pixel(1, 4, 127, 127, 0)
+                sleep(0.1)
 
-                    sense.set_pixel(2, 3, 127, 127, 0)
+                sense.set_pixel(2, 3, 127, 127, 0)
 
-                    sense.set_pixel(2, 4, 127, 127, 0)
-                    sleep(0.1)
+                sense.set_pixel(2, 4, 127, 127, 0)
+                sleep(0.1)
 
-                    sense.set_pixel(3, 3, 127, 127, 0)
+                sense.set_pixel(3, 3, 127, 127, 0)
 
-                    sense.set_pixel(3, 4, 127, 127, 0)
+                sense.set_pixel(3, 4, 127, 127, 0)
                 
-                    sleep(0.1)
-                    sense.set_pixel(4, 3, 127, 127, 0)
+                sleep(0.1)
+                sense.set_pixel(4, 3, 127, 127, 0)
 
-                    sense.set_pixel(4, 4, 127, 127, 0)
-                    sleep(0.1)
-                    sense.set_pixel(5, 3, 127, 127, 0)
+                sense.set_pixel(4, 4, 127, 127, 0)
+                sleep(0.1)
+                sense.set_pixel(5, 3, 127, 127, 0)
 
-                    sense.set_pixel(5, 4, 127, 127, 0)
+                sense.set_pixel(5, 4, 127, 127, 0)
 
-                    os.system("sudo rm -r /root/python/update/README.md /root/python/installation/")
-                    sleep(0.1)
-                    sense.set_pixel(6, 3, 127, 127, 0)
-                    os.system("mv ../configup ./configup")
+                os.system("sudo rm -r /root/python/update/README.md /root/python/installation/")
+                sleep(0.1)
+                sense.set_pixel(6, 3, 127, 127, 0)
+                os.system("mv ../configup ./configup")
 
-                    sense.set_pixel(6, 4, 127, 127, 0)
-                    sleep(0.1)
-                    sense.set_pixel(7, 3, 127, 127, 0)
+                sense.set_pixel(6, 4, 127, 127, 0)
+                sleep(0.1)
+                sense.set_pixel(7, 3, 127, 127, 0)
 
-                    sense.set_pixel(7, 4, 127, 127, 0)
-                    os._exit(0)
-            # Attendre quelques secondes avant de répéter
-            sleep(2)
+                sense.set_pixel(7, 4, 127, 127, 0)
+                os._exit(0)
+        # Attendre quelques secondes avant de répéter
+        sleep(2)
 
 except KeyboardInterrupt:
     # Terminer le programme proprement lorsqu'on appuie sur Ctrl+C
