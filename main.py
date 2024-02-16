@@ -56,7 +56,6 @@ try:
     programmes = os.listdir("/root/python-config/")
     programme = 0
     while True:
-        sense.set_pixel(0, 0, 0, 65, 65)
         # Obtenir les événements du joystick
         events = sense.stick.get_events()
         # Boucle sur les événements du joystick
@@ -75,7 +74,6 @@ try:
                             exec(f.read())
                         up.seek(0)
                         up.close()
-                        break
                 if programme == len(programmes) - 1:
                     programme = 0
                     continue
