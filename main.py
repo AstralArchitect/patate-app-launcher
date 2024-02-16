@@ -55,9 +55,6 @@ try:
 
     programmes = os.listdir("/root/python-config/")
     programme = 0
-    for i in programmes:
-        message = i
-        sense.show_message(message, text_colour=(0, 0, 127), scroll_speed=0.1)
     while True:
         # Obtenir les événements du joystick
         events = sense.stick.get_events()
@@ -74,7 +71,6 @@ try:
                             exec(f.read())
                         up.seek(0)
                         up.close()
-                        fin = True
             elif event.action == "pressed" and event.direction == "middle":
                 sense.set_pixel(0, 3, 127, 127, 0)
 
