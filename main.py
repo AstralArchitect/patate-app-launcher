@@ -74,9 +74,9 @@ try:
                             up.seek(0)
                             up.close()
                             fin = True
-                            if programme < len(programme):
+                            if programme < len(programmes):
                                 programme += 1
-                            else:
+                            elif programme == len(programmes):
                                 programme = 0
             # Mettre à jour le programme
             elif event.action == "pressed" and event.direction == "middle":
