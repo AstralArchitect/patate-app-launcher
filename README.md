@@ -12,11 +12,9 @@ Ceci est un "os", pour raspberry pi 2, il utilise la [raspberry pi sense hat](ht
   1. Un raspberry Pi avec au choix soit Raspbian, Debian ou Ubuntu déja installé (personnelement j'utilise un raspberry pi 2 avec raspbian)
   2. Une Raspberry Pi Sense Hat.
 
-# installation et configuration :
-## Installation :
+# 1. Installation de patateOS:
 ### note :
 Veuillez d'abord configurer votre raspberry pi de façon à ce qu'il n'ai pas d'interface graphique
-###
 
 
 déplacez vous dans /root/
@@ -48,33 +46,14 @@ Enfin executez le script d'installation :
 sudo python3 installation/Installation.py
 ```
 
-## Executer le script automatiquement au démarrage :
+# 2. Démmarer patateOS :
 
-Si vous avez installé le programme via installation.py, le script s'éxécutera automatiquement au démmarrage !
+Pour démmarer patateOS, Allumez votre raspberry pi. D'abord, la/le Sense Hat va se mettre en multicolor. Attendez un petit moment et les lumières vont s'éteindres et enfin une foit que vous voyiez défiler "Bonjour." alors PatateOS à démmaré.
 
-# Documentation :
-## Attention: Grosse mise à jour en cours, ces information peuvent être fausse. Elle seront mise à jour quand la mise à jour n'aura plus de beuges. Merci de votre compréhension.
+# 3. Utiliser patateOS :
 
-## Commandes de base :
-
-## 1. Usage du CPU et de la mémoire :
-Pour voir l'usage du cpu et de la mémoire poussez le joystick de votre sense hat vers la gauche
-
-## 2. Température, Pression et Humidité :
-
-Pour voire la température la pression et l'humidité poussez le joystick du sense hat vers la droite
-
-Attention: la température peut être fausse car le capteur se trouve près de votre ordinateur qui chauffe
-
-## 3. Non attribué : 
-
-Par défaut pousser le joystick vers le haut écrira "Vous n'avez rien installe.". Pour installer des programmes, [lisez cette page](https://github.com/AstralArchitect/pong-patateOS/blob/main/README.md#cr%C3%A9er-dautres-programmes-sur-patateos-)
-
-## 4. Mise à jour :
-
-Pour mettre à jour le programme appuyez sur le joystick
-
-## 5. Arret : 
-
-Pour éteindre votre ordinateur poussez le joystick vers le bas
-
+## 3.1 Afficher les programmes installés :
+Pour afficher les programmes installés poussez le joystick vers le haut. Pour voir le suivant repoussez vers le haut une fois que le nom du premier a finit de déffiler et ainsi de suite(une fois que vous avez fait déffilé tout les programmes, la liste repartira du début).
+### 3.1.1 Éxécuter le progarmme séléctionnné :
+Pour éxécuter le programme séléctionné appuyez sur le joystck AVANT que le nom ai finit de déffiler( Si vous le faite apprès, vous mettrez patateOS à jour).
+### 3.1.2 Désinstaller le programme séléctonné :
