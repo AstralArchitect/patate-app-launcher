@@ -56,6 +56,8 @@ try:
     programmes = os.listdir("/root/python-config/")
     programme = 0
     while True:
+        message = "Menu"
+        sense.show_message(message, text_colour=(0, 0, 127), scroll_speed=0.1, back_colour=(127, 127, 127))
         # Obtenir les événements du joystick
         events = sense.stick.get_events()
         # Boucle sur les événements du joystick
@@ -64,17 +66,16 @@ try:
                 sense.show_message(programmes[programme], text_colour=(0, 0, 127), scroll_speed=0.1)
                 events = sense.stick.get_events()
                 truc = False
-                for i in range(3):
-                    sleep(1)
-                    for event in events:
-                        if event.action == "pressed" and event.direction == "middle":
-                            up = open("/root/python-config/" + programmes[programme])
-                            loc = up.read()
-                            with open(loc) as f:
-                                exec(f.read())
-                            up.seek(0)
-                            up.close()
-                            break
+                sleep(1)
+                for event in events:
+                    if event.action == "pressed" and event.direction == "middle":
+                        up = open("/root/python-config/" + programmes[programme])
+                        loc = up.read()
+                        with open(loc) as f:
+                            exec(fread())
+                        up.seek(0)
+                        up.close()
+                        break
                 if programme == len(programmes) - 1:
                     programme = 0
                     continue
