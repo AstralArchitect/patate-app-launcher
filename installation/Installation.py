@@ -21,7 +21,6 @@ try:
             sleep(1)  # Attendre une seconde pour éviter une fermeture accidentelle
             
             sense.set_pixel(0, 3, 90, 127, 0)
-            os.system("mkdir /save/ ; mv /root/* /save/")
 
             sense.set_pixel(0, 4, 90, 127, 0)
             os.system("apt-get update -y")
@@ -54,12 +53,10 @@ try:
 
             sense.set_pixel(6, 4, 90, 127, 0)
             os.system("rm -r /root/python-config/ ; rm -r /root/python-packages/ ; mkdir /root/python-config ; mkdir /root/python-packages/ ; mkdir /root/python-packages/exemple/ ; mkdir /root/python-packages/cpu/")
-            with open('/root/python-config/configup', 'w') as f:
+            with open('/root/python-config/exemple', 'w') as f:
                 f.write('/root/python-packages/exemple/main.py')
-            with open('/root/python-config/configleft', 'w') as f:
+            with open('/root/python-config/cpu', 'w') as f:
                 f.write('/root/python-packages/cpu/CPU.py')
-            with open('/root/repeat.txt', 'w') as f:
-                f.write('now')
             os.system("mv /root/installation/installation/CPU.py /root/python-packages/cpu/ ; mv /root/installation/installation/main.py /root/python-packages/exemple/")
 
             sense.set_pixel(7, 3, 90, 127, 0)
