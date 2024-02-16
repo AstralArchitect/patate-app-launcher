@@ -149,6 +149,10 @@ try:
 
                 sense.set_pixel(7, 4, 127, 127, 0)
                 os._exit(0)
+            elif event.action == "pressed" and event.direction == "down":
+                sense.show_message(text_string="Arret...", text_colour=(127, 0, 0), scroll_speed=0.1)
+                sleep(0.5)
+                os.system("sudo shutdown now")
         # Attendre quelques secondes avant de répéter
         sleep(2)
 
