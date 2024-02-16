@@ -72,7 +72,7 @@ try:
                         up = open("/root/python-config/" + programmes[programme])
                         loc = up.read()
                         with open(loc) as f:
-                            exec(fread())
+                            exec(f.read())
                         up.seek(0)
                         up.close()
                         break
