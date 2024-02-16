@@ -63,7 +63,7 @@ try:
             if event.action == "pressed" and event.direction == "up":
                 sense.show_message(programmes[programme], text_colour=(0, 0, 127), scroll_speed=0.1)
                 fin = False
-                while fin == False:
+                while not fin:
                     events = sense.stick.get_events()
                     for event in events:
                         if event.action == "pressed" and event.direction == "middle":
@@ -74,10 +74,8 @@ try:
                             up.seek(0)
                             up.close()
                             fin = True
-                            if programme < len(programmes):
-                                programme += 1
-                            elif programme == len(programmes):
-                                programme = 0
+                # Incrémenter le programme après l'exécution
+                programme = (programme + 1) % len(programmes) 
             # Mettre à jour le programme
             elif event.action == "pressed" and event.direction == "middle":
                 sense.set_pixel(0, 3, 127, 127, 0)
