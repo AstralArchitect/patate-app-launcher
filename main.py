@@ -65,6 +65,7 @@ try:
                 events = sense.stick.get_events()
                 truc = False
                 for i in range(3):
+                    sleep(1)
                     for event in events:
                         if event.action == "pressed" and event.direction == "middle":
                             up = open("/root/python-config/" + programmes[programme])
@@ -73,7 +74,7 @@ try:
                                 exec(f.read())
                             up.seek(0)
                             up.close()
-                        sleep(1)
+                            break
                 if programme == len(programmes) - 1:
                     programme = 0
                     continue
