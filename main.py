@@ -71,6 +71,10 @@ try:
                             exec(f.read())
                         up.seek(0)
                         up.close()
+                if programme == len(programmes):
+                    programme = 0
+                    continue
+                programme = (programme + 1)
             elif event.action == "pressed" and event.direction == "middle":
                 sense.set_pixel(0, 3, 127, 127, 0)
 
@@ -121,10 +125,6 @@ try:
 
                 sense.set_pixel(7, 4, 127, 127, 0)
                 os._exit(0)
-            if programme == len(programmes):
-                programme = 0
-                continue
-            programme = (programme + 1)
         # Attendre quelques secondes avant de répéter
         sleep(2)
 
