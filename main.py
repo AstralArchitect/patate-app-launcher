@@ -64,7 +64,7 @@ try:
                 sense.show_message(programmes[programme], text_colour=(0, 0, 127), scroll_speed=0.1)
                 events = sense.stick.get_events()
                 truc = False
-                while not truc:
+                for i in 3:
                     for event in events:
                         if event.action == "pressed" and event.direction == "middle":
                             up = open("/root/python-config/" + programmes[programme])
@@ -73,9 +73,7 @@ try:
                                 exec(f.read())
                             up.seek(0)
                             up.close()
-                            truc = True
-                        elif event.action == "pressed" and event.direction == "up":
-                            truc = True
+                    sleep(1)
                 if programme == len(programmes) - 1:
                     programme = 0
                     continue
