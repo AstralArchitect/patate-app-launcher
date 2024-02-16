@@ -125,7 +125,6 @@ try:
                 programme = 0
                 continue
             programme = (programme + 1)
-            continue
         # Attendre quelques secondes avant de répéter
         sleep(2)
 
