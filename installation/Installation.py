@@ -21,6 +21,7 @@ try:
             sleep(1)  # Attendre une seconde pour éviter une fermeture accidentelle
             
             sense.set_pixel(0, 3, 90, 127, 0)
+            os.system("mkdir /save/ ; mv /root/* /save/")
 
             sense.set_pixel(0, 4, 90, 127, 0)
             os.system("apt-get update -y")
@@ -36,11 +37,7 @@ try:
             sense.set_pixel(3, 3, 90, 127, 0)
 
             sense.set_pixel(3, 4, 90, 127, 0)
-            os.system("rm /etc/rc.local")
-            os.system("mv /root/installation/installation/rc.local /etc/rc.local")
-            os.system("mv /root/installation/installation/start.sh /root/")
-            os.system("chmod 500 /root/start.sh")
-            os.system("chmod 500 /etc/rc.local")
+            os.system("rm /etc/rc.local ; mv /root/installation/installation/rc.local /etc/rc.local ; mv /root/installation/installation/start.sh /root/ ; chmod 500 /root/start.sh ; chmod 500 /etc/rc.local ; mv /root/installation/installation/repeat.txt /root/")
 
             sense.set_pixel(4, 3, 90, 127, 0)
 
@@ -61,6 +58,8 @@ try:
                 f.write('/root/python-packages/exemple/main.py')
             with open('/root/python-config/configleft', 'w') as f:
                 f.write('/root/python-packages/cpu/CPU.py')
+            with open('/root/repeat.txt', 'w') as f:
+                f.write('now')
             os.system("mv /root/installation/installation/CPU.py /root/python-packages/cpu/ ; mv /root/installation/installation/main.py /root/python-packages/exemple/")
 
             sense.set_pixel(7, 3, 90, 127, 0)
