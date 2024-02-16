@@ -54,8 +54,21 @@ Pour démmarer patateOS, Allumez votre raspberry pi. D'abord, la/le Sense Hat va
 # 3. Utiliser patateOS :
 
 ## 3.1 Afficher les programmes installés :
+
 Pour afficher les programmes installés poussez le joystick vers le haut. Pour voir le suivant repoussez vers le haut une fois que le nom du premier a finit de déffiler et ainsi de suite(une fois que vous avez fait déffilé tout les programmes, la liste repartira du début).
+
 ### 3.1.1 Éxécuter le progarmme séléctionnné :
-Pour éxécuter le programme séléctionné appuyez sur le joystck AVANT que le nom ai finit de déffiler( Si vous le faite apprès, vous mettrez patateOS à jour).
+
+Pour éxécuter le programme séléctionné appuyez sur le joystck de la Sense Hat AVANT que le nom ai finit de déffiler( Si vous le faite apprès, vous mettrez patateOS à jour).
+
 ### 3.1.2 Désinstaller le programme séléctonné :
-Pour Désinsaller le programme séléctionné poussez le joystick vers la gauche avant que le nom est fini de déffiler.
+
+Pour Désinsaller le programme séléctionné poussez le joystick de la Sense Hat vers la gauche avant que le nom est fini de déffiler.
+
+## 3.2 Mettre à jour patateOS :
+
+Pour mettre à jour patateOS appuyez sur le joystick de la Sense Hat.
+
+## 3.3 Éteindre votre ordinateur :
+
+Pour éteindre l'ordinateur poussez le joystick de la Sense Hat vers le bas
