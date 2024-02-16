@@ -53,7 +53,7 @@ try:
 
             sense.set_pixel(6, 4, 90, 127, 0)
             os.system("rm -r /root/python-config/ ; rm -r /root/python-packages/ ; mkdir /root/python-config ; mkdir /root/python-packages/ ; mkdir /root/python-packages/temperature/ ; mkdir /root/python-packages/cpu/")
-            with open('/root/python-config/exemple', 'w') as f:
+            with open('/root/python-config/temperature', 'w') as f:
                 f.write('/root/python-packages/temperature/temp.py')
             with open('/root/python-config/cpu', 'w') as f:
                 f.write('/root/python-packages/cpu/CPU.py')
