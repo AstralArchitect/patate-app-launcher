@@ -71,7 +71,7 @@ try:
                             exec(f.read())
                         up.seek(0)
                         up.close()
-                if programme == len(programmes):
+                if programme == len(programmes) - 1:
                     programme = 0
                     continue
                 programme = (programme + 1)
