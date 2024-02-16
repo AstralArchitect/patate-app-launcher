@@ -60,11 +60,9 @@ try:
         events = sense.stick.get_events()
         # Boucle sur les événements du joystick
         for event in events:
-            sense.clear()
             if event.action == "pressed" and event.direction == "up":
                 sense.show_message(programmes[programme], text_colour=(0, 0, 127), scroll_speed=0.1)
                 events = sense.stick.get_events()
-                truc = False
                 sleep(1)
                 for event in events:
                     if event.action == "pressed" and event.direction == "middle":
@@ -86,7 +84,6 @@ try:
                     continue
                 programme = (programme + 1)
             elif event.action == "pressed" and event.direction == "middle":
-                sense.clear()
                 message = "Mise a jour..."
                 
                 sense.show_message(message, text_colour=(127, 0, 127), scroll_speed=0.1)

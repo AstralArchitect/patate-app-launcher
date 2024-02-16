@@ -58,4 +58,4 @@ Pour afficher les programmes installés poussez le joystick vers le haut. Pour v
 ### 3.1.1 Éxécuter le progarmme séléctionnné :
 Pour éxécuter le programme séléctionné appuyez sur le joystck AVANT que le nom ai finit de déffiler( Si vous le faite apprès, vous mettrez patateOS à jour).
 ### 3.1.2 Désinstaller le programme séléctonné :
-
+Pour Désinsaller le programme séléctionné poussez le joystick vers la gauche avant que le nom est fini de déffiler.
