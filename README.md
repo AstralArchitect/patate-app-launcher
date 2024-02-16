@@ -1,3 +1,4 @@
+![image](https://github.com/AstralArchitect/patateOS/assets/154975712/c505561e-35a8-435c-9385-2f8121c49162)
 # ATTENTION !!!
 
 Ne fonctionne que sur raspberry pi.\
@@ -57,3 +58,4 @@ Pour afficher les programmes installés poussez le joystick vers le haut. Pour v
 ### 3.1.1 Éxécuter le progarmme séléctionnné :
 Pour éxécuter le programme séléctionné appuyez sur le joystck AVANT que le nom ai finit de déffiler( Si vous le faite apprès, vous mettrez patateOS à jour).
 ### 3.1.2 Désinstaller le programme séléctonné :
+
