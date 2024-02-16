@@ -57,7 +57,7 @@ try:
     programme = 0
     while True:
         message = "Menu"
-        sense.show_message(message, text_colour=(0, 0, 127), scroll_speed=0.1, back_colour=(127, 127, 127))
+        sense.show_message(message, text_colour=(0, 127, 0), scroll_speed=0.1, back_colour=(15, 0, 15))
         # Obtenir les événements du joystick
         events = sense.stick.get_events()
         # Boucle sur les événements du joystick
