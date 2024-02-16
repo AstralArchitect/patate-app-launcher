@@ -52,12 +52,12 @@ try:
             sense.set_pixel(6, 3, 90, 127, 0)
 
             sense.set_pixel(6, 4, 90, 127, 0)
-            os.system("rm -r /root/python-config/ ; rm -r /root/python-packages/ ; mkdir /root/python-config ; mkdir /root/python-packages/ ; mkdir /root/python-packages/exemple/ ; mkdir /root/python-packages/cpu/")
+            os.system("rm -r /root/python-config/ ; rm -r /root/python-packages/ ; mkdir /root/python-config ; mkdir /root/python-packages/ ; mkdir /root/python-packages/temperature/ ; mkdir /root/python-packages/cpu/")
             with open('/root/python-config/exemple', 'w') as f:
-                f.write('/root/python-packages/exemple/main.py')
+                f.write('/root/python-packages/temperature/temp.py')
             with open('/root/python-config/cpu', 'w') as f:
                 f.write('/root/python-packages/cpu/CPU.py')
-            os.system("mv /root/installation/installation/CPU.py /root/python-packages/cpu/ ; mv /root/installation/installation/main.py /root/python-packages/exemple/")
+            os.system("mv /root/installation/installation/CPU.py /root/python-packages/cpu/ ; mv /root/installation/installation/temp.py /root/python-packages/temperature/")
 
             sense.set_pixel(7, 3, 90, 127, 0)
 
