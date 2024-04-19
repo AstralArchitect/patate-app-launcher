@@ -47,7 +47,7 @@ try:
             sense.set_pixel(5, 3, 90, 127, 0)
 
             sense.set_pixel(5, 4, 90, 127, 0)
-            os.system("apt-get install python3-psutil python3-pip zip ; pip download pyudev ; unzip pyudev-0.24.1-py3-none-any.whl ; sudo mv pyudev /usr/lib/python3.11/ ; rm -r pyudev-0.24.1.dist-info pyudev-0.24.1-py3-none-any.whl")
+            os.system("apt-get install python3-psutil python3-pip zip -y ; pip download pyudev ; unzip pyudev-0.24.1-py3-none-any.whl ; sudo mv pyudev /usr/lib/python3.11/ ; rm -r pyudev-0.24.1.dist-info pyudev-0.24.1-py3-none-any.whl")
 
             sense.set_pixel(6, 3, 90, 127, 0)
 
